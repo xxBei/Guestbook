@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+body{
+	width: auto;
+}
+#reg h3{
+	width:80%;
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	text-align:center;
+	border:1px dashed #ccc;
+	margin: 5px auto;
+}
+#reg dl{
+	width: 80%;
+	margin: 0 auto;
+}
+#reg dl dd{
+	float: left;
+	padding: 2px 2px 0 0;
+}
+#reg dl dd img{
+	width:100px;
+	height: 100px;
+	cursor: pointer;
+}
