@@ -7,9 +7,10 @@
 * @version:
 */
 session_start();
-require dirname(__FILE__).'/includes/common.inc.php';
 //定义一个常量，防止恶意调用
 define('ROOT', true);
+require dirname(__FILE__).'/includes/common.inc.php';
+
 //定义一个常量，用来区分不同页面的css样式的引用
 define('SCRIPT', 'register');
 //验证是否提交
@@ -20,13 +21,14 @@ if(@$_GET['action']=='register'){
     if(!($yzm==$_SESSION['code'])){
         _alert_back('验证码错误！');
     }
+    //引入校验文件
+    include ROOT_PATH.'includes/register.func.php';
     //定义一个数组来存放表单数据
     $clean = array();
-    $clean['username'] = $_POST['username'];
-    $clean['password'] = $_POST['password'];
-    
-    echo $clean['username'].'<br>';
-    echo $clean['password'].'<br>';
+    $clean['username'] = _check_username($_POST['username'],2,20);
+    print_r($clean);
+
+
 }
 ?>
 <!doctype html>

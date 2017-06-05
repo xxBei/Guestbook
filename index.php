@@ -1,15 +1,15 @@
-<?php 
-    require dirname(__FILE__).'/includes/common.inc.php';
+<?php
     //定义一个常量，防止恶意调用
     define('ROOT', true);
     define('SCRIPT', 'index');
+    require dirname(__FILE__).'/includes/common.inc.php';
 ?>
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<?php require ROOT_PATH.'includes//title.inc.php';?>
-	
+	<?php require ROOT_PATH.'includes/title.inc.php';?>
+
 	<title>留言簿--首页</title>
 </head>
 <body>

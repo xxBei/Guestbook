@@ -26,14 +26,14 @@ function _runtime(){
  * @access public 表示访问类型为公共访问
  * @return void 表示无返回值
  */
-function _code($width = 75,$height = 25,$rnd_code = 4,$_flag = false){ 
+function _code($width = 75,$height = 25,$rnd_code = 4,$_flag = false){
     $_nmsg = "";
     //生成四位随机码
     for($i=0;$i<$rnd_code;$i++){
         $_nmsg .= dechex(mt_rand(1,15));
     }
     $_SESSION['code'] = $_nmsg;
-    
+
     header("Content-Type:image/png");
     //创建一个真彩图片
     $_img = imagecreatetruecolor($width, $height);
@@ -42,7 +42,7 @@ function _code($width = 75,$height = 25,$rnd_code = 4,$_flag = false){
     $_color = imagecolorallocate($_img, mt_rand(0,255), mt_rand(0,255), mt_rand(0,255));
     //填充颜色,
     imagefill($_img, 0, 0, $_white);
-    
+
     if($_flag){
         //画一个多彩边框
         imagerectangle($_img, 0, 0, $width-1, $height-1, $_color);
@@ -69,10 +69,10 @@ function _code($width = 75,$height = 25,$rnd_code = 4,$_flag = false){
     imagedestroy($_img);
 }
 /**
- *_alert_back() 表示验证码验证不正确提示弹出框
- *@param varchar int $_info 表示提示消息 
+ *_alert_back() 表示JS弹出框
+ *@param varchar int $_info 表示提示消息
  *@access public
- *@return void 表示无返回值
+ *@return $_info 弹窗
  */
 function _alert_back($_info){
     echo "<script type='text/javascript'>alert('".$_info."');history.back();</script>";
