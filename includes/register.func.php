@@ -20,7 +20,7 @@ if(!function_exists('_alert_back')){
  * @param string $_string 没有过滤的用户名
  * @param int $min_num
  * @param int $max_num
- * @return string 过滤后的用户名
+ * @return string $_string 过滤后的用户名
  */
 function _check_username($_string,$min_num,$max_num){
     //去掉空格
