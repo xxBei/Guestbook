@@ -30,8 +30,8 @@ if(@$_GET['action']=='register'){
     $clean['password'] = _check_password($_POST['password'], $_POST['notpassword'], 6);
     $clean['question'] = _check_question($_POST['question'], 2, 20);
     $clean['answer'] = _check_answer($_POST['question'], $_POST['answer'], 2, 20);
-    $clean['sex'] = $_POST['sex'];
-    $clean['faces'] = $_POST['faces'];
+    $clean['sex'] = _check_sex($_POST['sex']);
+    $clean['faces'] = _check_face($_POST['faces']);
     $clean['email'] = _check_email($_POST['email']);
     $clean['qq'] = _check_qq($_POST['qq']);
     $clean['url'] = _check_url($_POST['url']);

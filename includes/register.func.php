@@ -61,6 +61,8 @@ function _check_username($_string,$min_num,$max_num){
  * @return String $_first 加密的密码
  */
 function _check_password($_first,$_end,$min_num){
+    //去掉空格
+    $_first= trim($_first);
     //密码不能小于6位
     if(strlen($_first) < 6){
         exit(_alert_back('密码不能小于'.$min_num.'位'));
@@ -82,6 +84,8 @@ function _check_password($_first,$_end,$min_num){
  * @return string $_question 转义密码问题
  */
 function _check_question($_question,$min_num,$max_num){
+    //去掉空格
+    $_question= trim($_question);
     //密码问题不能小于4位或大于20位
     if(mb_strlen($_question,'utf-8')<$min_num || mb_strlen($_question,'utf-8')>$max_num){
         _alert_back('密码问题不能小于'.$min_num.'位或大于'.$max_num.'位');
@@ -100,6 +104,8 @@ function _check_question($_question,$min_num,$max_num){
  * @return string $_answ 加密密码答案
  */
 function _check_answer($_ques,$_answ,$min_num,$max_num){
+    //去掉空格
+    $_answ= trim($_answ);
     //密码答案不能小于2位或大于20位
     if(mb_strlen($_answ,'utf-8')<$min_num || mb_strlen($_answ,'utf-8')>$max_num){
         _alert_back('密码答案不能小于'.$min_num.'位或大于'.$max_num.'位');
@@ -113,12 +119,34 @@ function _check_answer($_ques,$_answ,$min_num,$max_num){
 }
 
 /**
+ * _check_sex() 验证性别
+ * @access public
+ * @param String $_string
+ * @return $_string 返回加密性别
+ */
+function _check_sex($_string){
+    return _mysql_string($_string);
+}
+
+/**
+ * _check_face() 验证头像
+ * @access public
+ * @param String $_string
+ * @return $_string 返回加密头像
+ */
+function _check_face($_string){
+    return _mysql_string($_string);
+}
+
+/**
  *_check_email() 验证邮箱
  * @access public
  * @param string $_string 邮箱
  * @return NULL|$_string null 或验证后的邮箱
  */
 function _check_email($_string){
+    //去掉空格
+    $_string= trim($_string);
     if(empty($_string)){
         return null;
     }else {
@@ -137,6 +165,8 @@ function _check_email($_string){
  * @return NULL|$_string null 或验证后的邮箱
  */
 function _check_qq($_string){
+    //去掉空格
+    $_string= trim($_string);
     if(empty($_string)){
         return null;
     }else {
@@ -154,6 +184,8 @@ function _check_qq($_string){
  * @return NULL|$_string null 或者验证后的网址
  */
 function _check_url($_string){
+    //去掉空格
+    $_string= trim($_string);
     if(empty($_string) || ($_string == 'http://')){
         return null;
     }
