@@ -15,16 +15,17 @@ require dirname(__FILE__).'/includes/common.inc.php';
 define('SCRIPT', 'register');
 //验证是否提交
 if(@$_GET['action']=='register'){
-    //验证码不区分大小写
-    $yzm = strtolower($_POST['yzm']);
     //为防止恶意注册，跨站攻击
-    if(!($yzm==$_SESSION['code'])){
-        exit(_alert_back('验证码错误！'));
-    }
+    _check_code($_POST['code'], $_SESSION['code']);
     //引入校验文件
     include ROOT_PATH.'includes/register.func.php';
     //定义一个数组来存放表单数据
     $clean = array();
+    //通过唯一标示符来防止恶意注册，伪装表单跨站攻击
+    //除啦存入数据库唯一标识符还有第二个用途，就是登陆cookie验证
+    $clean['uniqid'] = _check_uniqid($_POST['uniqid'], $_SESSION['uniqid']);
+    //active也是唯一标识符，用来给刚注册的用户进行激活的
+    $clean['active'] = _sha1_uniqid();
     $clean['username'] = _check_username($_POST['username'],2,20);
     $clean['password'] = _check_password($_POST['password'], $_POST['notpassword'], 6);
     $clean['question'] = _check_question($_POST['question'], 2, 20);
@@ -36,7 +37,10 @@ if(@$_GET['action']=='register'){
     $clean['url'] = _check_url($_POST['url']);
     print_r($clean);
 
+}else{
+    $_SESSION['uniqid'] = $_uniqid = _sha1_uniqid();
 }
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -53,6 +57,7 @@ if(@$_GET['action']=='register'){
 		<form action="register.php?action=register" name="register" method="post">
 			<dl>
 				<dt>请仔细填写一下信息</dt>
+				<dd><input type="hidden" name="uniqid" value="<?php echo @$_uniqid;?>"/></dd>
 				<dd>用户名称：<input type="text" name="username" class="text"/>　<span>(*必填，最少为2位)</span></dd>
 				<dd>密　　码：<input type="password" name="password" class="text"/>　(*必填，最少为6位)</dd>
 				<dd>确认密码：<input type="password" name="notpassword" class="text"/>　(*必填，最少为6位)</dd>
@@ -63,7 +68,7 @@ if(@$_GET['action']=='register'){
 				<dd>电子邮件：<input type="text" name='email' class='text'/></dd>
 				<dd>　Q Q　：<input type="text" name='qq' class="text"/></dd>
 				<dd>主页地址：<input type="text" name='url' value='http://' class="text"/></dd>
-				<dd>验  证  码 ：<input type="text" name='yzm' class="text yzm"/><img id="code" src="code.php"></dd>
+				<dd>验  证  码 ：<input type="text" name='code' class="text yzm"/><img id="code" src="code.php"></dd>
 				<dd><input type="submit" name='submit' value='注册' class="submit"/></dd>
 			</dl>
 		</form>

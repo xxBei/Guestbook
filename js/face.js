@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
  window.onload = function(){
 	var userimg = document.getElementById('userimg');
@@ -12,5 +12,5 @@
 	code.onclick = function(){
 		this.src='code.php?rnd='+Math.random();
 	}
-	
+
 };

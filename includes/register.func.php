@@ -13,7 +13,9 @@ if(!defined('ROOT')){
 if(!function_exists('_alert_back')){
     exit('_alert_back()函数不存在');
 }
-
+if(!function_exists('_mysql_string')){
+    exit('_mysql_string()函数不存在');
+}
 /**
  * @_check_username() 检测用户名函数
  * @access public 公共函数
@@ -47,7 +49,7 @@ function _check_username($_string,$min_num,$max_num){
     }
     //将用户名转义输出
 //     return mysqli_real_escape_string($_string);
-    return $_string;
+    return _mysql_string($_string);
 }
 
 /**
@@ -68,7 +70,7 @@ function _check_password($_first,$_end,$min_num){
         exit(_alert_back('两次密码不一致'));
     }
     //返回加密密码
-    return sha1($_first);
+    return _mysql_string(sha1($_first));
 }
 
 /**
@@ -85,7 +87,7 @@ function _check_question($_question,$min_num,$max_num){
         _alert_back('密码问题不能小于'.$min_num.'位或大于'.$max_num.'位');
     }
     //返回转义密码问题
-    return addslashes($_question);
+    return _mysql_string($_question);
 }
 
 /**
@@ -107,7 +109,7 @@ function _check_answer($_ques,$_answ,$min_num,$max_num){
         _alert_back('密码答案不能和密码问题一致！');
     }
     //返回加密答案
-    return sha1($_answ);
+    return _mysql_string(sha1($_answ));
 }
 
 /**
@@ -125,7 +127,7 @@ function _check_email($_string){
             _alert_back('邮箱格式不正确！');
         }
     }
-    return $_string;
+    return _mysql_string($_string);
 }
 
 /**
@@ -142,7 +144,7 @@ function _check_qq($_string){
             _alert_back('QQ格式不正确！');
         }
     }
-    return $_string;
+    return _mysql_string($_string);
 }
 
 /**
@@ -160,10 +162,22 @@ function _check_url($_string){
             _alert_back('网址格式不正确！');
         }
     }
-    return $_string;
+    return _mysql_string($_string);
 }
 
-
+/**
+ * _check_uniqid() 唯一标识符验证
+ * @access public
+ * @param string $_first__uniqid 表单提交的uniqid
+ * @param string $_end_uniqid Session传来的uniqid
+ * @return $_string 返回转义的唯一标识符
+ */
+function _check_uniqid($_first__uniqid,$_end_uniqid){
+    if(($_first__uniqid != $_end_uniqid) || strlen($_first__uniqid) != 40){
+        _alert_back('唯一标识符异常！');
+    }
+    return _mysql_string($_first__uniqid);
+}
 
 
 

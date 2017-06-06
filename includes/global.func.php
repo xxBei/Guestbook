@@ -18,6 +18,41 @@ function _runtime(){
 }
 
 /**
+ * _sha1_uniqid() 唯一标识符函数
+ * @return string
+ */
+function _sha1_uniqid(){
+    return sha1(uniqid(rand(),true));
+}
+
+/**
+ * _mysql_string() 字符转义函数
+ * @access public
+ * @param string $_string
+ * @return $_string|$_string 一个转义后的字符，一个是没有转义的字符
+ */
+function _mysql_string($_string){
+    if(!GPC){
+        return addslashes($_string);
+    }
+    return $_string;
+}
+
+/**
+ * _check_code() 验证码验证
+ * @param String $_first_code
+ * @param String $_end_code
+ */
+function _check_code($_first_code,$_end_code){
+    //验证码不区分大小写
+    $_first_code = strtolower($_first_code);
+    //为防止恶意注册，跨站攻击
+    if(!($_first_code==$_end_code)){
+        exit(_alert_back('验证码错误！'));
+    }
+}
+
+/**
  * _code()是验证码函数
  * @param int $width 表示宽
  * @param int $heigh 表示高

@@ -6,10 +6,10 @@
 * @author: zbei
 * @version:
 */
-require dirname(__FILE__).'/includes/common.inc.php';
 //定义一个常量，防止恶意调用
 define('ROOT', true);
 define('SCRIPT', 'face');
+require dirname(__FILE__).'/includes/common.inc.php';
 ?>
 <!doctype html>
 <html lang="en">
@@ -24,10 +24,10 @@ define('SCRIPT', 'face');
 		<h3>选择头像</h3>
 		<dl>
 			<?php foreach (range(1,15) as $num){?>
-			
+
 			<dd><img src="face/<?php echo $num;?>.png" alt="face/<?php echo $num;?>.png" id="faceimg" title='头像<?php echo $num;?>'/></dd>
 			<?php }?>
-			
+
 		</dl>
 	</div>
 </body>

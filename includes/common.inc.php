@@ -9,6 +9,8 @@
 header('Content-Type:text/html;charset=utf-8');
 //获取当前目录路径,这样的好处访问速度更快
 define('ROOT_PATH', substr(dirname(__FILE__), 0,-8));
+//定义一个转义常量
+define('GPC', get_magic_quotes_gpc());
 //防止恶意调用
 if(!defined('ROOT')){
     echo 'Access Defined!';
