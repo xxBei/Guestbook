@@ -1,6 +1,6 @@
 <?php
 /**
-* 文件用途：过滤信息
+* 文件用途：过滤注册表信息
 * ==============================================
 * @date: 2017年6月4日
 * @author: zbei
@@ -110,12 +110,58 @@ function _check_answer($_ques,$_answ,$min_num,$max_num){
     return sha1($_answ);
 }
 
+/**
+ *_check_email() 验证邮箱
+ * @access public
+ * @param string $_string 邮箱
+ * @return NULL|$_string null 或验证后的邮箱
+ */
+function _check_email($_string){
+    if(empty($_string)){
+        return null;
+    }else {
+        //447362429@163.com.cn
+        if(!preg_match('/^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/', $_string)){
+            _alert_back('邮箱格式不正确！');
+        }
+    }
+    return $_string;
+}
 
+/**
+ * _check_qq() 验证QQ
+ * @access public
+ * @param string $_string QQ
+ * @return NULL|$_string null 或验证后的邮箱
+ */
+function _check_qq($_string){
+    if(empty($_string)){
+        return null;
+    }else {
+        if(!preg_match('/^[1-9]{1}[\d]{4,9}$/', $_string)){
+            _alert_back('QQ格式不正确！');
+        }
+    }
+    return $_string;
+}
 
-
-
-
-
+/**
+ * _check_url() 验证网址
+ * @access public
+ * @param String $_string 网址
+ * @return NULL|$_string null 或者验证后的网址
+ */
+function _check_url($_string){
+    if(empty($_string) || ($_string == 'http://')){
+        return null;
+    }
+    else {
+        if(!preg_match('/^https?:\/\/[\w\.]?[\w\-\.]+(\.\w+)+?$/', $_string)){
+            _alert_back('网址格式不正确！');
+        }
+    }
+    return $_string;
+}
 
 
 
