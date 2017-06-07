@@ -7,6 +7,7 @@ window.onload = function(){
 		img[i].onclick = function(){
 			//获取子窗口face中的alt
 			_opener(this.alt);
+			window.close();
 		}
 	}
 }

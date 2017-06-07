@@ -10,7 +10,6 @@ session_start();
 //定义一个常量，防止恶意调用
 define('ROOT', true);
 require dirname(__FILE__).'/includes/common.inc.php';
-
 //定义一个常量，用来区分不同页面的css样式的引用
 define('SCRIPT', 'register');
 //验证是否提交
@@ -35,8 +34,46 @@ if(@$_GET['action']=='register'){
     $clean['email'] = _check_email($_POST['email']);
     $clean['qq'] = _check_qq($_POST['qq']);
     $clean['url'] = _check_url($_POST['url']);
-    print_r($clean);
-
+    $_query = mysqli_query($_conn, "SELECT gb_username FROM gb_manager WHERE gb_username = '{$_POST['username']}'");
+    if(mysqli_fetch_array($_query,MYSQLI_ASSOC)){
+        _alert_back('该用户已被注册！');
+        exit();
+    }else{
+        mysqli_query($_conn, "INSERT INTO gb_manager(
+                                                        gb_uniqid,
+                                                        gb_active,
+                                                        gb_username,
+                                                        gb_password,
+                                                        gb_question,
+                                                        gb_answer,
+                                                        gb_email,
+                                                        gb_qq,
+                                                        gb_url,
+                                                        gb_sex,
+                                                        gb_face,
+                                                        gb_reg_time,
+                                                        gb_last_time,
+                                                        gb_last_id
+                                                    )
+                                            VALUES(
+                                                        '{$clean['uniqid']}',
+                                                        '{$clean['active']}',
+                                                        '{$clean['username']}',
+                                                        '{$clean['password']}',
+                                                        '{$clean['question']}',
+                                                        '{$clean['answer']}',
+                                                        '{$clean['email']}',
+                                                        '{$clean['qq']}',
+                                                        '{$clean['url']}',
+                                                        '{$clean['sex']}',
+                                                        '{$clean['faces']}',
+                                                        NOW(),
+                                                        NOW(),
+                                                        '{$_SERVER["REMOTE_ADDR"]}'
+                                                    )") or die('执行错误'.mysqli_error($_conn));
+        mysqli_close($_conn);
+        _location('恭喜你，注册成功', 'index.php');
+    }
 }else{
     $_SESSION['uniqid'] = $_uniqid = _sha1_uniqid();
 }

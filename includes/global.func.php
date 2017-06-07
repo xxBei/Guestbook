@@ -110,10 +110,13 @@ function _code($width = 75,$height = 25,$rnd_code = 4,$_flag = false){
  *@return $_info 弹窗
  */
 function _alert_back($_info){
-    echo "<script type='text/javascript'>alert('".$_info."');history.back();</script>";
+    echo "<script type='text/javascript'>alert('$_info');history.back();</script>";
 }
 
 
+function _location($_info,$_url){
+    echo "<script type='text/javascript'>alert('$_info');location.href='$_url';</script>";
+}
 
 
 
