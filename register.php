@@ -87,7 +87,7 @@ if(@$_GET['action']=='register'){
 	<meta charset="UTF-8" />
 	<?php require ROOT_PATH.'includes/title.inc.php';?>
 	<title>留言簿--注册</title>
-	<script type="text/javascript" src="js/face.js"></script>
+	<script type="text/javascript" src="js/register.js"></script>
 </head>
 <body>
 	<?php require ROOT_PATH.'includes/header.inc.php'?>
@@ -104,7 +104,7 @@ if(@$_GET['action']=='register'){
 				<dd>密码回答：<input type="text" name="answer" class="text"/>　(*必填，最少为2位)</dd>
 				<dd>性　　别：<input type="radio" name='sex' value='男' checked="checked"/>男　<input type="radio" name='sex' value='女'/>女</dd>
 				<dd><input type="hidden" name ="faces" value="face/1.png"><img src="face/1.png" class='face' id="userimg"/></dd>
-				<dd>电子邮件：<input type="text" name='email' class='text'/></dd>
+				<dd>电子邮件：<input type="text" name='email' class='text'/>　(*必填，最少为2位)</dd>
 				<dd>　Q Q　：<input type="text" name='qq' class="text"/></dd>
 				<dd>主页地址：<input type="text" name='url' value='http://' class="text"/></dd>
 				<dd>验  证  码 ：<input type="text" name='code' class="text yzm"/><img id="code" src="code.php"></dd>

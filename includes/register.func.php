@@ -42,6 +42,7 @@ function _check_username($_string,$min_num,$max_num){
     $_mg[0] = 'xbei';
     $_mg[1] = 'zbei';
     foreach ($_mg as $value){
+        $_mg_string = '';
         @$_mg_string .= $value.'\n';
     }
     if(in_array($_string, $_mg)){
@@ -60,6 +61,7 @@ function _check_username($_string,$min_num,$max_num){
  * @param int $min_num 最小位数
  * @return String $_first 加密的密码
  */
+
 function _check_password($_first,$_end,$min_num){
     //去掉空格
     $_first= trim($_first);
@@ -147,13 +149,8 @@ function _check_face($_string){
 function _check_email($_string){
     //去掉空格
     $_string= trim($_string);
-    if(empty($_string)){
-        return null;
-    }else {
-        //447362429@163.com.cn
-        if(!preg_match('/^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/', $_string)){
-            _alert_back('邮箱格式不正确！');
-        }
+    if(!preg_match('/^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/', $_string)){
+        _alert_back('邮箱格式不正确！');
     }
     return _mysql_string($_string);
 }

@@ -111,6 +111,7 @@ function _code($width = 75,$height = 25,$rnd_code = 4,$_flag = false){
  */
 function _alert_back($_info){
     echo "<script type='text/javascript'>alert('$_info');history.back();</script>";
+    exit();
 }
 
 
