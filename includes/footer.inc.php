@@ -10,6 +10,7 @@
 if(!defined('ROOT')){
     exit('Access Defined!');
 }
+_mysql_close();
 ?>
 
 <div id="footer">

@@ -20,21 +20,17 @@ if(PHP_VERSION<4.0){
     exit("<strong>Version is too low!</strong>");
 }
 
-//引入核心函数
-require 'includes/global.func.php';
+//引入函数库
+require  ROOT_PATH.'includes/global.func.php';
+require  ROOT_PATH.'includes/mysql.func.php';
 //定义一个常量，常量为开始时间
 define('START_TIME', _runtime());
 
 
 //数据库连接
-define('DB_SERVER', 'localhost');
-define('DB_USER', 'root');
-define('DB_PSW', 'root');
-define('DB_NAME', 'guestbooks');
-
-$_conn = mysqli_connect(DB_SERVER,DB_USER,DB_PSW) or die('数据库连接失败！');
-mysqli_select_db($_conn, DB_NAME) or die('数据库不正确');
-mysqli_set_charset($_conn, 'UTF8');
+_mysql_connect();
+_mysql_select_dbname();
+_mysql_charset();
 
 
 
