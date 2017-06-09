@@ -58,6 +58,12 @@ function _mysql_close(){
     return mysqli_close($_conn);
 }
 
+
+function _mysql_affected_rows(){
+    global $_conn;
+    return mysqli_affected_rows($_conn);
+}
+
 /**
  * _mysql_query() 数据库执行操作
  * @param $_sql SQL语句
@@ -66,7 +72,7 @@ function _mysql_close(){
 function _mysql_query($_sql){
     global $_conn;
     if(!$_result = mysqli_query($_conn,$_sql)){
-        exit('SQL执行失败');
+        exit('SQL执行失败'.mysqli_error($_conn));
     }
     return $_result;
 }
@@ -92,9 +98,4 @@ function _is_repeat($_sql,$_info){
     }
 }
 
-
-function _mysql(){
-    global $_conn;
-    mysqli_fetch_array($_conn,MYSQLI_ASSOC);
-}
 ?>

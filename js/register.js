@@ -79,12 +79,17 @@
             }
 		}
 		//网址验证
-		if(fm.url.value != ''|| fm.url.value == "http://"){
-            if(!/^https?:\/\/[\w\.]?[\w\-\.]+(\.\w+)+?$/.test(fm.url.value)){
-                alert('网址格式不正确！');
-                fm.url.value = '';
-                fm.url.focus();
-                return false;
+
+		if(fm.url.value != ''){
+			if(fm.url.value == 'http://'){
+                return true;
+			}else {
+                if (!/^https?:\/\/[\w\.]?[\w\-\.]+(\.\w+)+?$/.test(fm.url.value)) {
+                    alert('网址格式不正确！');
+                    fm.url.value = '';
+                    fm.url.focus();
+                    return false;
+                }
             }
 		}
 		//验证码验证
@@ -94,6 +99,7 @@
             fm.code.focus();
             return false;
 		}
+
 		return true;
     };
 };

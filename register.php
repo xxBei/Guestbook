@@ -73,8 +73,9 @@ if(@$_GET['action']=='register'){
                                         NOW(),
                                         '{$_SERVER["REMOTE_ADDR"]}'
                                     )");
-        _mysql_close();
-        _location('恭喜你，注册成功', 'index.php');
+        if(_mysql_affected_rows()==1){
+            _location('恭喜你，注册成功', 'active.php?active='.$clean['active']);
+        }
 
 }else{
     $_SESSION['uniqid'] = $_uniqid = _sha1_uniqid();
