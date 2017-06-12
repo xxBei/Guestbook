@@ -18,9 +18,6 @@
 	margin:10px 0;
 	font-weight: bold;
 }
-#reg dl dd span{
-	color:red;
-}
 #reg dl dd input.text{
 	width: 220px;
 	height: 19px;

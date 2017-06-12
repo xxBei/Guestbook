@@ -74,7 +74,7 @@ function _mysql_query($_sql){
     if(!$_result = mysqli_query($_conn,$_sql)){
         exit('SQL执行失败'.mysqli_error($_conn));
     }
-    return $_result;
+    return $_result; 
 }
 
 /**
