@@ -35,7 +35,7 @@ if(isset($_GET['active'])&& isset($_GET['action']) && $_GET['action']=='ok'){
 <head>
     <meta charset="UTF-8" />
     <?php require ROOT_PATH.'includes/title.inc.php';?>
-    <title>留言簿--注册</title>
+    <title>留言簿--激活</title>
     <script type="text/javascript" src="js/register.js"></script>
 </head>
 <body>

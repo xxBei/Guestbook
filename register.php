@@ -88,6 +88,7 @@ if(@$_GET['action']=='register'){
 	<meta charset="UTF-8" />
 	<?php require ROOT_PATH.'includes/title.inc.php';?>
 	<title>留言簿--注册</title>
+    <script type="text/javascript" src="js/code.js"></script>
 	<script type="text/javascript" src="js/register.js"></script>
 </head>
 <body>
@@ -98,7 +99,7 @@ if(@$_GET['action']=='register'){
 			<dl>
 				<dt>请仔细填写一下信息</dt>
 				<dd><input type="hidden" name="uniqid" value="<?php echo @$_uniqid;?>"/></dd>
-				<dd>用户名称：<input type="text" name="username" class="text"/>　<span>(*必填，最少为2位)</span></dd>
+				<dd>用户名称：<input type="text" name="username" class="text"/>　(*必填，最少为2位)</dd>
 				<dd>密　　码：<input type="password" name="password" class="text"/>　(*必填，最少为6位)</dd>
 				<dd>确认密码：<input type="password" name="notpassword" class="text"/>　(*必填，最少为6位)</dd>
 				<dd>密码提示：<input type="text" name="question" class="text"/>　(*必填，最少为2位)</dd>
