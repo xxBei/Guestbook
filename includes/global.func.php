@@ -114,13 +114,28 @@ function _alert_back($_info){
     exit();
 }
 
-
+/**
+ * _location() 跳转
+ * @access public
+ * @param $_info 信息
+ * @param $_url 网址
+ * @return void
+ */
 function _location($_info,$_url){
-    echo "<script type='text/javascript'>alert('$_info');location.href='$_url';</script>";
+    if(empty($_info)){
+        Header('Location:'.$_url);
+    }else{
+        echo "<script type='text/javascript'>alert('$_info');location.href='$_url';</script>";
+}   }
+
+/**
+ * session_destroy() 销毁session
+ * @access public
+ * @return void
+ */
+function _session_destroy(){
+    session_destroy();
 }
-
-
-
 
 
 

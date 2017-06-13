@@ -74,7 +74,13 @@ if(@$_GET['action']=='register'){
                                         '{$_SERVER["REMOTE_ADDR"]}'
                                     )");
         if(_mysql_affected_rows()==1){
+            _mysql_close();
+            _session_destroy();
             _location('恭喜你，注册成功', 'active.php?active='.$clean['active']);
+        }else{
+            _mysql_close();
+            _session_destroy();
+            _location('很遗憾，注册失败', 'register.php');
         }
 
 }else{

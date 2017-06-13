@@ -12,8 +12,24 @@ define('ROOT', true);
 require dirname(__FILE__).'/includes/common.inc.php';
 //定义一个常量，用来区分不同页面的css样式的引用
 define('SCRIPT', 'login');
-if($_GET['action'] == 'login'){
-    exit('111');
+if(@$_GET['action'] == 'login'){
+    //为防止恶意注册，跨站攻击
+    _check_code($_POST['code'], $_SESSION['code']);
+    //引入校验文件
+    include ROOT_PATH.'includes/login.func.php';
+    $clean = array();
+    $clean['username'] = _check_username($_POST['username'],2,20);
+    $clean['password'] = _check_password($_POST['password'],6);
+    $clean['time'] = _check_time($_POST['time']);
+    if(_mysql_fetch_array("SELECT gb_username,gb_uniqid FROM gb_manager WHERE gb_username = '{$clean['username']}' AND gb_password = '{$clean['password']}' AND gb_active IS NULL LIMIT 1")){
+        _mysql_close();
+        _session_destroy();
+       _location(null,'index.php');
+    }else{
+        _mysql_close();
+        _session_destroy();
+        _location('用户名密码不正确或账户未激活！','login.php');
+    }
 }
 ?>
 <!doctype html>
@@ -34,7 +50,7 @@ if($_GET['action'] == 'login'){
                 <dt>　　</dt>
                 <dd>用户名称：<input type="text" name="username" class="text"/></dd>
                 <dd>密　　码：<input type="password" name="password" class="text"/></dd>
-                <dd>保　　留：<input type="radio" name="time" value="0" checked="checked">不保留　<input type="radio" name="time" value="1">一天　<input type="radio" name="time" value="2">一周　<input type="radio" name="time" value="30">一月</dd>
+                <dd>保　　留：<input type="radio" name="time" value="0" checked="checked">不保留　<input type="radio" name="time" value="1">一天　<input type="radio" name="time" value="2">一周　<input type="radio" name="time" value="3">一月</dd>
                 <dd>验  证  码 ：<input type="text" name='code' class="text code"/><img id="code" src="code.php"></dd>
                 <dd><input type="submit" value='登录' class="button"/><input type="button" value='注册' id="location" class="button location"/></dd>
             </dl>
