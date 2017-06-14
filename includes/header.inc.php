@@ -28,6 +28,7 @@ if(!defined('ROOT')){
 		        echo "\n";
             }
         ?>
+        <li><a href="blog.php">博友</a></li>
 		<li>网络</li>
 		<li>管理</li>
         <?php

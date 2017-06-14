@@ -78,12 +78,21 @@ function _mysql_query($_sql){
 }
 
 /**
- * _mysql_fetch_array() 从结果集取得一行作为数字数组或关联数组
+ * _mysql_fetch_array() 从结果集取得一行作为数字数组或关联数组，只有一行
  * @param $_sql SQL语句
  * @return array|null
  */
 function _mysql_fetch_array($_sql){
     return mysqli_fetch_array(_mysql_query($_sql),MYSQLI_ASSOC);
+}
+
+/**
+ * _mysql_fetch_array_list() 从结果集取得一行作为数字数组或关联数组，多行
+ * @param $_result
+ * @return array|null
+ */
+function _mysql_fetch_array_list($_result){
+    return mysqli_fetch_array($_result,MYSQLI_ASSOC);
 }
 
 /**
