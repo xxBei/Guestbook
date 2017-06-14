@@ -137,8 +137,50 @@ function _session_destroy(){
     session_destroy();
 }
 
+/**
+ * _unsetcookies() 销毁cookie
+ * @access public
+ * @return void
+ */
+function _unsetcookies(){
+    _session_destroy();
+    setcookie('username','',time()-1);
+    setcookie('uniqid','',time()-1);
+    _location(null,'index.php');
+}
+
+/**
+ * _setcookies() 设置cookie
+ * @param $_username 用户名
+ * @param $_uniqid 唯一标识符
+ * @param $_time 保留时间
+ */
+function _setcookies($_username,$_uniqid,$_time){
+    switch ($_time){
+        case '0':
+            setcookie('username',$_username);
+            setcookie('uniqid',$_uniqid);
+            break;
+        case '1':
+            setcookie('username',$_username,time()+86400);
+            setcookie('uniqid',$_uniqid,time()+86400);
+            break;
+        case '2':
+            setcookie('username',$_username,time()+604800);
+            setcookie('uniqid',$_uniqid,time()+604800);
+            break;
+        case '3':
+            setcookie('username',$_username,time()+2592000);
+            setcookie('uniqid',$_uniqid,time()+2592000);
+            break;
+    }
+
+}
 
 
-
-
+function _login_state(){
+    if(isset($_COOKIE['username'])){
+        _alert_back('登录状态下不可进行本操作');
+    }
+}
 ?>

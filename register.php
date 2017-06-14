@@ -10,6 +10,8 @@ session_start();
 //定义一个常量，防止恶意调用
 define('ROOT', true);
 require dirname(__FILE__).'/includes/common.inc.php';
+//登录状态
+_login_state();
 //定义一个常量，用来区分不同页面的css样式的引用
 define('SCRIPT', 'register');
 //验证是否提交

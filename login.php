@@ -10,6 +10,8 @@ session_start();
 //定义一个常量，防止恶意调用
 define('ROOT', true);
 require dirname(__FILE__).'/includes/common.inc.php';
+//登录状态
+_login_state();
 //定义一个常量，用来区分不同页面的css样式的引用
 define('SCRIPT', 'login');
 if(@$_GET['action'] == 'login'){
@@ -21,9 +23,10 @@ if(@$_GET['action'] == 'login'){
     $clean['username'] = _check_username($_POST['username'],2,20);
     $clean['password'] = _check_password($_POST['password'],6);
     $clean['time'] = _check_time($_POST['time']);
-    if(_mysql_fetch_array("SELECT gb_username,gb_uniqid FROM gb_manager WHERE gb_username = '{$clean['username']}' AND gb_password = '{$clean['password']}' AND gb_active IS NULL LIMIT 1")){
+    if(!!$_rows = _mysql_fetch_array("SELECT gb_username,gb_uniqid FROM gb_manager WHERE gb_username = '{$clean['username']}' AND gb_password = '{$clean['password']}' AND gb_active IS NULL LIMIT 1")){
         _mysql_close();
         _session_destroy();
+        _setcookies($_rows['gb_username'],$_rows['gb_uniqid'],$clean['time']);
        _location(null,'index.php');
     }else{
         _mysql_close();
