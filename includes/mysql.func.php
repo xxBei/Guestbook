@@ -107,4 +107,14 @@ function _is_repeat($_sql,$_info){
     }
 }
 
+/**
+ * _mysql_num_rows() 查看数据库中有多少条数据,该函数用于分页处理
+ * @access public
+ * @param $_sql
+ * @return int
+ */
+function _mysql_num_rows($_sql){
+    return mysqli_num_rows(_mysql_query($_sql));
+}
+
 ?>
