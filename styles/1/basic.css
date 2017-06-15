@@ -73,3 +73,34 @@ h2{
 	font-weight:bold;
 	cursor:pointer;
 }
+#page{
+	clear: both;
+	position: relative;
+}
+#page ul{
+	height:20px;
+	position: absolute;
+	left: 45%;
+	top: 50px;
+}
+#page ul li{
+	width: 38px;
+	height:30px;
+	float:left;
+
+}
+#page ul li a{
+	display: block;
+	width: 28px;
+	height:28px;
+	line-height: 28px;
+	text-align: center;
+	text-decoration: none;
+	border:1px solid #ccc;
+	color: black;
+}
+#page ul li a:hover,#page ul li a.selected{
+	color: #fff;
+	background: #666;
+	font-weight: bold;
+}
