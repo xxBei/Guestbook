@@ -8,6 +8,7 @@
  */
 //定义一个常量，防止恶意调用
 define('ROOT', true);
+define('SCRIPT', 'blog');
 require dirname(__FILE__).'/includes/common.inc.php';
 //分页模块
 @$_page = $_GET['page'];
@@ -32,9 +33,9 @@ if($_page > $_pageabsolute){
     $_page = $_pageabsolute;
 }
 $_pagenum = ($_page-1)*$_pagesize;
+//显示会员信息
 $_result = _mysql_query("SELECT gb_username,gb_sex,gb_face FROM gb_manager WHERE gb_active IS NULL ORDER BY gb_reg_time DESC LIMIT $_pagenum,$_pagesize");
 //定义一个常量，用来区分不同页面的css样式的引用
-define('SCRIPT', 'blog');
 ?>
 <!doctype html>
 <html lang="en">
@@ -65,6 +66,7 @@ define('SCRIPT', 'blog');
         </dl>
         <?php }?>
 
+        <!--数组分页-->
         <div id="page">
             <ul>
                 <?php for($i=1;$i<=$_pageabsolute;$i++){
@@ -74,6 +76,31 @@ define('SCRIPT', 'blog');
                         echo '<li><a href="blog.php?page='.$i.'">'.$i.'</a></li>';
                     }
                 }?>
+            </ul>
+        </div>
+
+            <!--文章分页-->
+        <div id="textpage">
+            <ul>
+                <li><?php echo $_page?>/<?php echo $_pageabsolute?>|</li>
+                <li>共有<?php echo $_num?>个会员|</li>
+                <?php
+                    if($_page == 1){
+                        echo '<li>首页|</li>';
+                        echo '<li>上一页|</li>';
+                    }else{
+                        echo '<li><a href="'.SCRIPT.'.php">首页</a>| </li>';
+                        echo '<li><a href="'.SCRIPT.'.php?page='.($_page-1).'">上一页</a>| </li>';
+                    }
+                    if($_page == $_pageabsolute){
+                        echo '<li>下一页| </li>';
+                        echo '<li>尾页| </li>';
+                    }else{
+                        echo '<li><a href="'.SCRIPT.'.php?page='.($_page+1).'">下一页</a>| </li>';
+                        echo '<li><a href="'.SCRIPT.'.php?page='.$_pageabsolute.'">尾页</a></li>';
+                    }
+                ?>
+
             </ul>
         </div>
     </div>

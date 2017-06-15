@@ -75,13 +75,14 @@ h2{
 }
 #page{
 	clear: both;
+	height: 30px;
 	position: relative;
 }
 #page ul{
-	height:20px;
+	height:30px;
+	/*margin-top: 20px;*/
 	position: absolute;
 	left: 45%;
-	top: 50px;
 }
 #page ul li{
 	width: 38px;
@@ -103,4 +104,17 @@ h2{
 	color: #fff;
 	background: #666;
 	font-weight: bold;
+}
+#textpage{
+	clear: both;
+	margin-top: 20px;
+}
+#textpage ul{
+	text-align: center;
+}
+#textpage ul li{
+	display: inline-block;
+}
+#textpage ul li a{
+	color: #000;
 }
