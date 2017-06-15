@@ -9,11 +9,29 @@
 //定义一个常量，防止恶意调用
 define('ROOT', true);
 require dirname(__FILE__).'/includes/common.inc.php';
-$_page = $_GET['page'];
+//分页模块
+@$_page = $_GET['page'];
 $_pagesize = 10;
-$_pagenum = ($_page-1)*$_pagesize;
+if(isset($_page)){
+    $_page = $_GET['page'];
+    if(empty($_page) || $_page < 0 || !is_numeric($_page)){
+        $_page = 1;
+    }else{
+        $_page = intval($_page);
+    }
+}else{
+    $_page = 1;
+}
 $_num = _mysql_num_rows("SELECT gb_id FROM gb_manager");
-$_pageabsolute = ceil($_num/$_pagesize);
+if($_num == 0){
+    $_pageabsolute == 1;
+}else{
+    $_pageabsolute = ceil($_num/$_pagesize);
+}
+if($_page > $_pageabsolute){
+    $_page = $_pageabsolute;
+}
+$_pagenum = ($_page-1)*$_pagesize;
 $_result = _mysql_query("SELECT gb_username,gb_sex,gb_face FROM gb_manager WHERE gb_active IS NULL ORDER BY gb_reg_time DESC LIMIT $_pagenum,$_pagesize");
 //定义一个常量，用来区分不同页面的css样式的引用
 define('SCRIPT', 'blog');
