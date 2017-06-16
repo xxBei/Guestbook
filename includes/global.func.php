@@ -177,10 +177,84 @@ function _setcookies($_username,$_uniqid,$_time){
 
 }
 
-
+/**
+ * _login_state() 登录状态下判断，登录情况下不能进行注册和登录
+ */
 function _login_state(){
     if(isset($_COOKIE['username'])){
         _alert_back('登录状态下不可进行本操作');
+    }
+}
+
+
+function _page_main($_sql,$_size){
+    global $_page,$_pagesize,$_pagenum,$_num,$_pageabsolute;
+    @$_page = $_GET['page'];
+    $_pagesize = $_size;
+    if(isset($_page)){
+        $_page = $_GET['page'];
+        if(empty($_page) || $_page < 0 || !is_numeric($_page)){
+            $_page = 1;
+        }else{
+            $_page = intval($_page);
+        }
+    }else{
+        $_page = 1;
+    }
+    $_num = _mysql_num_rows($_sql);
+    if($_num == 0){
+        $_pageabsolute == 1;
+    }else{
+        $_pageabsolute = ceil($_num/$_pagesize);
+    }
+    if($_page > $_pageabsolute){
+        $_page = $_pageabsolute;
+    }
+    $_pagenum = ($_page-1)*$_pagesize;
+}
+
+/**
+ * _page_type() 分页状态，1为数字分页，2为文章分页
+ * @param $_type
+ */
+function _page_type($_type){
+    global $_pageabsolute,$_page,$_num;
+    if($_type == 1){
+    /*数组分页*/
+    echo '<div id="page">';
+    echo '<ul>';
+            for($i=1;$i<=$_pageabsolute;$i++){
+                if($_page == $i){
+                    echo '<li><a href="blog.php?page='.$i.'" class="selected">'.$i.'</a></li>';
+                }else{
+                    echo '<li><a href="blog.php?page='.$i.'">'.$i.'</a></li>';
+                }
+            }
+    echo '</ul>';
+    echo '</div>';
+    }else if ($_type == 2){
+        /*文章分页*/
+        echo '<div id="textpage">';
+        echo '<ul>';
+        echo '<li>'.$_page.'/'.$_pageabsolute.'|</li>';
+        echo '<li>共有'.$_num.'个会员|</li>';
+        if($_page == 1){
+            echo '<li>首页|</li>';
+            echo '<li>上一页|</li>';
+        }else{
+            echo '<li><a href="'.SCRIPT.'.php">首页</a>| </li>';
+            echo '<li><a href="'.SCRIPT.'.php?page='.($_page-1).'">上一页</a>| </li>';
+        }
+        if($_page == $_pageabsolute){
+            echo '<li>下一页| </li>';
+            echo '<li>尾页| </li>';
+        }else{
+            echo '<li><a href="'.SCRIPT.'.php?page='.($_page+1).'">下一页</a>| </li>';
+            echo '<li><a href="'.SCRIPT.'.php?page='.$_pageabsolute.'">尾页</a></li>';
+        }
+
+        echo '</ul>';
+        echo '</div>';
     }
 }
 ?>

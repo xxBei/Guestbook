@@ -76,11 +76,12 @@ h2{
 #page{
 	clear: both;
 	height: 30px;
+	padding-top: 40px;
 	position: relative;
 }
 #page ul{
 	height:30px;
-	/*margin-top: 20px;*/
+	text-align: center;
 	position: absolute;
 	left: 45%;
 }
@@ -107,7 +108,7 @@ h2{
 }
 #textpage{
 	clear: both;
-	margin-top: 20px;
+	padding-top: 40px;
 }
 #textpage ul{
 	text-align: center;
