@@ -30,21 +30,29 @@ $_result = _mysql_query("SELECT gb_username,gb_sex,gb_face FROM gb_manager WHERE
     <div id="blog">
         <h2>博友页面</h2>
 
-        <?php while($_rows = _mysql_fetch_array_list($_result)){?>
+        <?php
+            while($_rows = _mysql_fetch_array_list($_result)){
+            $_html = array();
+            $_html['username'] = $_rows['gb_username'];
+            $_html['face'] = $_rows['gb_face'];
+            $_html['sex'] = $_rows['gb_sex'];
+            $_html = _htmlspecialchars($_html);
+        ?>
         <dl>
-            <dd class="user"><?php echo $_rows['gb_username']?></dd>
-            <dt><img src="<?php echo $_rows['gb_face']?>" alt="张三"></dt>
+            <dd class="user"><?php echo $_html['username']?></dd>
+            <dt><img src="<?php echo $_html['face']?>" alt="张三"></dt>
             <dd class="message">发消息</dd>
             <dd class="friend">加为好友</dd>
             <dd class="guest">写留言</dd>
             <dd class="flower">送<?php
-                    if($_rows['gb_sex'] == '男'){
+                    if($_html['sex'] == '男'){
                         echo '他';
                     }else{
                         echo '她';
                     } ?>鲜花</dd>
         </dl>
         <?php }
+            _mysql_free_result($_result);
             //调用分页函数
             _page_type(1);
         ?>

@@ -39,8 +39,8 @@ function _check_username($_string,$min_num,$max_num){
     }
 
     //敏感用户名
-    $_mg[0] = 'xbei';
-    $_mg[1] = 'zbei';
+    $_mg[0] = 'xxbei';
+    $_mg[1] = 'zzbei';
     foreach ($_mg as $value){
         $_mg_string = '';
         @$_mg_string .= $value.'\n';

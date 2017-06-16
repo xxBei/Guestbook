@@ -27,7 +27,7 @@ if(@$_GET['action'] == 'login'){
         _mysql_close();
         _session_destroy();
         _setcookies($_rows['gb_username'],$_rows['gb_uniqid'],$clean['time']);
-       _location(null,'index.php');
+       _location(null,'member.php');
     }else{
         _mysql_close();
         _session_destroy();

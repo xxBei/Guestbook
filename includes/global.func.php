@@ -261,4 +261,25 @@ function _page_type($_type){
         echo '</div>';
     }
 }
+
+/**
+ * _htmlspecialchars() 将特殊字符转换为 HTML 实体，
+ * 先判断传入的是否是数组，如果是数组则采用递归的方式来循环转换，
+ * 如果传入的是字符串，那么直接通过内置函数转化
+ * @param $_string
+ * @return array|string
+ */
+function _htmlspecialchars($_string){
+    if(is_array($_string)){
+        foreach ($_string as $_key => $_value){
+            //此方法采用的是递归，让每次遍历出来的下标和其对应的值都执行自身方法，然后在返回出去
+            $_string[$_key] = _htmlspecialchars($_value);
+            //这个上面方法一样，只是这个采用的是内置函数，而上面采用的是递归
+            $_string[$_key] = htmlspecialchars($_value);
+        }
+    }else{
+        $_string = htmlspecialchars($_string);
+    }
+    return $_string;
+}
 ?>

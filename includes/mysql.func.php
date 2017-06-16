@@ -117,4 +117,10 @@ function _mysql_num_rows($_sql){
     return mysqli_num_rows(_mysql_query($_sql));
 }
 
+/**
+ * _mysql_free_result() 释放结果集资源
+ */
+function _mysql_free_result($_result){
+    return mysqli_free_result($_result);
+}
 ?>
