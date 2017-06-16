@@ -1,0 +1,65 @@
+@CHARSET "UTF-8";
+#member{
+    width: auto;
+    height: 550px;
+    border: 1px solid #ccc;
+    font-size:12px;
+}
+#member h2{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+#member #member_sidebar{
+    width: 300px;
+    height: 450px;
+    margin: 15px;
+    border: 1px dashed #999;
+    float: left;
+}
+#member #member_sidebar dl{
+    width: 280px;
+    margin: 10px auto;
+}
+#member #member_sidebar dl dt{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+    background: #666;
+}
+#member #member_sidebar dl dd{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+
+    background: #eee;
+}
+#member #member_sidebar dl dd a{
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
+#member #member_sidebar dl dd a:hover{
+    background: #ccc;
+}
+#member #member_main{
+    width: 590px;
+    height: 450px;
+    margin: 15px;
+    border: 1px dashed #999;
+    float: right;
+}
+#member #member_main dl{
+    width: 500px;
+    margin: 10px auto;
+}
+#member #member_main dd{
+    font-size: 14px;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+}

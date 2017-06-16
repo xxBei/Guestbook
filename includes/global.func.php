@@ -186,7 +186,11 @@ function _login_state(){
     }
 }
 
-
+/**
+ * _page_main() 分页主函数
+ * @param $_sql SQL语句
+ * @param $_size 显示多少条数据
+ */
 function _page_main($_sql,$_size){
     global $_page,$_pagesize,$_pagenum,$_num,$_pageabsolute;
     @$_page = $_GET['page'];
