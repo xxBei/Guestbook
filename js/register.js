@@ -74,7 +74,6 @@
             }
 		}
 		//网址验证
-
 		if(fm.url.value != ''){
 			if(fm.url.value == 'http://'){
                 return true;

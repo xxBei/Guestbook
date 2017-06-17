@@ -78,6 +78,26 @@ function _check_password($_first,$_end,$min_num){
 }
 
 /**
+ * _check_mobify_password() 验证修改密码
+ * @param $_string
+ * @param $_min_num
+ * @return string
+ */
+function _check_mobify_password($_string,$_min_num){
+    //去掉空格
+    $_string= trim($_string);
+    //密码不能小于6位
+    if(!empty($_string)){
+        if(strlen($_string) < $_min_num){
+            exit(_alert_back('密码不能小于'.$_min_num.'位'));
+        }
+    }else{
+        return null;
+    }
+    return _mysql_string(sha1($_string));
+}
+
+/**
  * _check_question 验证问题
  * @access public
  * @param String $_question 问题
