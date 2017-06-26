@@ -112,14 +112,25 @@ function _code($width = 75,$height = 25,$rnd_code = 4,$_flag = false){
     //销毁图片
     imagedestroy($_img);
 }
+
 /**
  *_alert_back() 表示JS弹出框
  *@param varchar int $_info 表示提示消息
  *@access public
- *@return $_info 弹窗
+ *@return void
  */
 function _alert_back($_info){
     echo "<script type='text/javascript'>alert('$_info');history.back();</script>";
+    exit();
+}
+
+/**
+ * _alert_close() 弹出信息后关闭当前页面
+ * @access public
+ * @param $_info 表示提示消息
+ */
+function _alert_close($_info){
+    echo "<script type='text/javascript'>alert('$_info');window.close();</script>";
     exit();
 }
 

@@ -1,7 +1,7 @@
 @CHARSET "UTF-8";
 #blog{
     width: auto;
-    height: 600px;
+    height: 700px;
     border: 1px solid #ccc;
     font-size:12px;
 }
@@ -37,6 +37,14 @@
 }
 #blog dl dd.message{
     background: url("../../images/message.png") no-repeat 2px 62%;
+}
+#blog dl dd.message a{
+    text-decoration: none;
+    color: black;
+}
+#blog dl dd.message a:hover{
+    color: #f00;
+    font-weight: bold;
 }
 #blog dl dd.friend{
     background: url("../../images/friend_add.png") no-repeat -3% 62%;

@@ -12,9 +12,9 @@ define('SCRIPT', 'blog');
 require dirname(__FILE__).'/includes/common.inc.php';
 //调用分页函数
 global $_pagesize,$_pagenum;
-_page_main("SELECT gb_id FROM gb_manager WHERE gb_active IS NULL",10);
+_page_main("SELECT gb_id FROM gb_manager WHERE gb_active IS NULL",15);
 //显示会员信息
-$_result = _mysql_query("SELECT gb_username,gb_sex,gb_face FROM gb_manager WHERE gb_active IS NULL ORDER BY gb_reg_time DESC LIMIT $_pagenum,$_pagesize");
+$_result = _mysql_query("SELECT gb_id,gb_username,gb_sex,gb_face FROM gb_manager WHERE gb_active IS NULL ORDER BY gb_reg_time DESC LIMIT $_pagenum,$_pagesize");
 //定义一个常量，用来区分不同页面的css样式的引用
 ?>
 <!doctype html>
@@ -23,6 +23,7 @@ $_result = _mysql_query("SELECT gb_username,gb_sex,gb_face FROM gb_manager WHERE
     <meta charset="UTF-8" />
     <?php require ROOT_PATH.'includes/title.inc.php';?>
     <title>留言簿--博友</title>
+    <script type="text/javascript" src="js/blog.js"></script>
 </head>
 <body>
 <?php require ROOT_PATH.'includes/header.inc.php'?>
@@ -33,6 +34,7 @@ $_result = _mysql_query("SELECT gb_username,gb_sex,gb_face FROM gb_manager WHERE
         <?php
             while($_rows = _mysql_fetch_array_list($_result)){
             $_html = array();
+            $_html['id'] = $_rows['gb_id'];
             $_html['username'] = $_rows['gb_username'];
             $_html['face'] = $_rows['gb_face'];
             $_html['sex'] = $_rows['gb_sex'];
@@ -41,7 +43,7 @@ $_result = _mysql_query("SELECT gb_username,gb_sex,gb_face FROM gb_manager WHERE
         <dl>
             <dd class="user"><?php echo $_html['username']?></dd>
             <dt><img src="<?php echo $_html['face']?>" alt="张三"></dt>
-            <dd class="message">发消息</dd>
+            <dd class="message"><a href="#" name="message" title="<?php echo $_html['id']?>">发消息</a></dd>
             <dd class="friend">加为好友</dd>
             <dd class="guest">写留言</dd>
             <dd class="flower">送<?php
