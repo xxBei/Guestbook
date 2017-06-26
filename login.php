@@ -24,6 +24,14 @@ if(@$_GET['action'] == 'login'){
     $clean['password'] = _check_password($_POST['password'],6);
     $clean['time'] = _check_time($_POST['time']);
     if(!!$_rows = _mysql_fetch_array("SELECT gb_username,gb_uniqid FROM gb_manager WHERE gb_username = '{$clean['username']}' AND gb_password = '{$clean['password']}' AND gb_active IS NULL LIMIT 1")){
+        //登录成功后，记录登录信息，最后的登录的时间、ip、次数
+        _mysql_query("UPDATE gb_manager SET 
+                                                  gb_last_time = NOW(),
+                                                  gb_last_ip = '{$_SERVER["REMOTE_ADDR"]}',
+                                                  gb_login_count = gb_login_count+1 
+                                              WHERE 
+                                                  gb_username = '{$_rows['gb_username']}'
+                                              ");
         _mysql_close();
         _session_destroy();
         _setcookies($_rows['gb_username'],$_rows['gb_uniqid'],$clean['time']);

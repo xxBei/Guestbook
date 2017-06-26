@@ -26,6 +26,15 @@ function _sha1_uniqid(){
 }
 
 /**
+ * _uniqid() 判断唯一标识符是否一致
+ */
+function _uniqid($_cookie_uniqid,$_mysql_uniqid){
+    if($_cookie_uniqid != $_mysql_uniqid){
+        _alert_back('唯一标识符异常');
+    }
+}
+
+/**
  * _mysql_string() 字符转义函数
  * @access public
  * @param string $_string

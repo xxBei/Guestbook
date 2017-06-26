@@ -11,56 +11,59 @@ session_start();
 define('ROOT', true);
 require dirname(__FILE__) . '/includes/common.inc.php';
 define('SCRIPT', 'member_modify');
-
 if (@$_GET['action'] == 'mobify') {
     //为防止恶意注册，跨站攻击
     _check_code($_POST['code'], $_SESSION['code']);
-    require ROOT_PATH . 'includes/register.func.php';
-    $_clean = array();
-    $_clean['password'] = _check_mobify_password($_POST['password'], 6);
-    $_clean['sex'] = $_POST['sex'];
-    $_clean['face'] = $_POST['face'];
-    $_clean['email'] = _check_email($_POST['email']);
-    $_clean['url'] = _check_url($_POST['url']);
-    $_clean['qq'] = _check_qq($_POST['qq']);
-    //执行修改数据操作
-    if(!empty($_clean['password'])){//密码等于空不修改密码
-        _mysql_query("UPDATE gb_manager SET
-                                                    gb_password='{$_clean['password']}',
-                                                    gb_sex='{$_clean['sex']}',
-                                                    gb_face='{$_clean['face']}',
-                                                    gb_email='{$_clean['email']}',
-                                                    gb_url='{$_clean['url']}',
-                                                    gb_qq='{$_clean['qq']}'
-                                              WHERE
-                                                    gb_username='{$_COOKIE['username']}'
-                                                    ");
-    }else{//密码不等于空，修改密码
-        _mysql_query("UPDATE gb_manager SET
-                                                    gb_sex='{$_clean['sex']}',
-                                                    gb_face='{$_clean['face']}',
-                                                    gb_email='{$_clean['email']}',
-                                                    gb_url='{$_clean['url']}',
-                                                    gb_qq='{$_clean['qq']}'
-                                              WHERE
-                                                    gb_username='{$_COOKIE['username']}'
-                                                    ");
+    //判断用户名是否存在
+    if (!!$_rows = _mysql_fetch_array("SELECT gb_uniqid FROM gb_manager WHERE gb_username='{$_COOKIE['username']}' LIMIT 1")){
+        //防止伪造唯一标识符，判断cookie的标识符和数据库中的唯一标识符是否一致
+        _uniqid($_COOKIE['uniqid'],$_rows['gb_uniqid']);
+        require ROOT_PATH . 'includes/register.func.php';
+        $_clean = array();
+        $_clean['password'] = _check_mobify_password($_POST['password'], 6);
+        $_clean['sex'] = $_POST['sex'];
+        $_clean['face'] = $_POST['face'];
+        $_clean['email'] = _check_email($_POST['email']);
+        $_clean['url'] = _check_url($_POST['url']);
+        $_clean['qq'] = _check_qq($_POST['qq']);
+        //执行修改数据操作
+        if (!empty($_clean['password'])) {//密码等于空不修改密码
+            _mysql_query("UPDATE gb_manager SET
+                                                        gb_password='{$_clean['password']}',
+                                                        gb_sex='{$_clean['sex']}',
+                                                        gb_face='{$_clean['face']}',
+                                                        gb_email='{$_clean['email']}',
+                                                        gb_url='{$_clean['url']}',
+                                                        gb_qq='{$_clean['qq']}'
+                                                  WHERE
+                                                        gb_username='{$_COOKIE['username']}'
+                                                        ");
+        } else {//密码不等于空，修改密码
+            _mysql_query("UPDATE gb_manager SET
+                                                        gb_sex='{$_clean['sex']}',
+                                                        gb_face='{$_clean['face']}',
+                                                        gb_email='{$_clean['email']}',
+                                                        gb_url='{$_clean['url']}',
+                                                        gb_qq='{$_clean['qq']}'
+                                                  WHERE
+                                                        gb_username='{$_COOKIE['username']}'
+                                                        ");
+        }
+        //判断是否修改成功
+        if (_mysql_affected_rows() == 1) {
+            _mysql_close();
+            _session_destroy();
+            _location('恭喜你，修改成功', 'member.php');
+        } else {
+            _mysql_close();
+            _session_destroy();
+            _location('很抱歉，没有任何修改', 'member_modify.php');
+        }
     }
-    //判断是否修改成功
-    if (_mysql_affected_rows() == 1) {
-        _mysql_close();
-        _session_destroy();
-        _location('恭喜你，修改成功', 'member.php');
-    } else {
-        _mysql_close();
-        _session_destroy();
-        _location('很遗憾，修改失败', 'member_modify.php');
-    }
-
 }
 //验证cookie是否存在
 if (isset($_COOKIE['username'])) {
-    $_result = _mysql_fetch_array("SELECT gb_username,gb_sex,gb_face,gb_email,gb_url,gb_qq FROM gb_manager WHERE gb_username='{$_COOKIE['username']}'");
+    $_result = _mysql_fetch_array("SELECT gb_username,gb_sex,gb_face,gb_email,gb_url,gb_qq FROM gb_manager WHERE gb_username='{$_COOKIE['username']}' LIMIT 1");
     $_html = array();
     $_html['username'] = $_result['gb_username'];
     $_html['sex'] = $_result['gb_sex'];
