@@ -35,19 +35,6 @@ function _uniqid($_cookie_uniqid,$_mysql_uniqid){
 }
 
 /**
- * _mysql_string() 字符转义函数
- * @access public
- * @param string $_string
- * @return $_string|$_string 一个转义后的字符，一个是没有转义的字符
- */
-function _mysql_string($_string){
-    if(!GPC){
-        return addslashes($_string);
-    }
-    return $_string;
-}
-
-/**
  * _check_code() 验证码验证
  * @param String $_first_code
  * @param String $_end_code
@@ -299,6 +286,28 @@ function _htmlspecialchars($_string){
         }
     }else{
         $_string = htmlspecialchars($_string);
+    }
+    return $_string;
+}
+
+/**
+ * _mysql_string() 字符转义函数
+ * @access public
+ * @param string $_string
+ * @return $_string|$_string 一个转义后的字符，一个是没有转义的字符
+ */
+function _mysql_string($_string){
+    if(!GPC) {
+        if (is_array($_string)) {
+            foreach ($_string as $_key => $_value) {
+                //此方法采用的是递归，让每次遍历出来的下标和其对应的值都执行自身方法，然后在返回出去
+                $_string[$_key] = addslashes($_value);
+                //这个上面方法一样，只是这个采用的是内置函数，而上面采用的是递归
+                $_string[$_key] = addslashes($_value);
+            }
+        } else {
+            $_string = addslashes($_string);
+        }
     }
     return $_string;
 }
