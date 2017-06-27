@@ -15,7 +15,14 @@ if (@$_GET['action'] == 'mobify') {
     //为防止恶意注册，跨站攻击
     _check_code($_POST['code'], $_SESSION['code']);
     //判断用户名是否存在
-    if (!!$_rows = _mysql_fetch_array("SELECT gb_uniqid FROM gb_manager WHERE gb_username='{$_COOKIE['username']}' LIMIT 1")){
+    if (!!$_rows = _mysql_fetch_array("SELECT 
+                                                    gb_uniqid 
+                                             FROM 
+                                                    gb_manager 
+                                             WHERE 
+                                                    gb_username='{$_COOKIE['username']}' 
+                                             LIMIT 
+                                                    1")){
         //防止伪造唯一标识符，判断cookie的标识符和数据库中的唯一标识符是否一致
         _uniqid($_COOKIE['uniqid'],$_rows['gb_uniqid']);
         require ROOT_PATH . 'includes/check.func.php';

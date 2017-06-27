@@ -141,7 +141,9 @@ function _location($_info,$_url){
  * @return void
  */
 function _session_destroy(){
-    session_destroy();
+    if(session_start()){
+        session_destroy();
+    }
 }
 
 /**
@@ -248,7 +250,7 @@ function _page_type($_type){
         echo '<div id="textpage">';
         echo '<ul>';
         echo '<li>'.$_page.'/'.$_pageabsolute.'|</li>';
-        echo '<li>共有'.$_num.'个会员|</li>';
+        echo '<li>共有'.$_num.'个数据|</li>';
         if($_page == 1){
             echo '<li>首页|</li>';
             echo '<li>上一页|</li>';
@@ -318,8 +320,8 @@ function _mysql_string($_string){
  * @return string
  */
 function _title($_string){
-    if(mb_strlen($_string,'utf-8') > 14 ){
-        $_string = mb_substr($_string,1,14,'utf-8').'...';
+    if(mb_strlen($_string,'utf-8') > 14){
+        $_string = mb_substr($_string,0,14,'utf-8').'...';
     }
     return $_string;
 }

@@ -37,7 +37,6 @@ $_result = _mysql_query("SELECT gb_id,
                                       gb_date DESC
                                  LIMIT
                                       $_pagenum,$_pagesize");
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -71,7 +70,7 @@ $_result = _mysql_query("SELECT gb_id,
         </table>
         <?php
             //调用分页函数
-            _page_type(1);
+            _page_type(2);
         ?>
     </div>
 </div>

@@ -14,8 +14,56 @@ require dirname(__FILE__).'/includes/common.inc.php';
 if(!isset($_COOKIE['username'])){
     _alert_close('请先登录');
 }
+//删除单条短信
+//判断是否点击了删除按钮并且id存在
+if(@$_GET['action']=='delete' && isset($_GET['id'])){
+    $_rows = _mysql_fetch_array("SELECT 
+                                              gb_id 
+                                        FROM 
+                                              gb_message 
+                                       WHERE 
+                                              gb_id = '{$_GET['id']}'
+                                       LIMIT 
+                                              1
+                                ");
+    //危险操作，先验证唯一标识符是否一致
+    if(!!$_rows){
+        $_rows2 = _mysql_fetch_array("SELECT 
+                                                  gb_uniqid 
+                                            FROM 
+                                                  gb_manager 
+                                            WHERE 
+                                                  gb_username='{$_COOKIE['username']}'
+                                            LIMIT
+                                                  1
+                                      ");
+        if(!!$_rows2){
+            _uniqid($_COOKIE['uniqid'],$_rows2['gb_uniqid']);
+            _mysql_query("DELETE FROM
+                                              gb_message
+                                       WHERE 
+                                              gb_id = '{$_GET['id']}'
+                                       LIMIT 
+                                              1
+                         ");
+            if(_mysql_affected_rows() == 1){
+                _mysql_close();
+                _session_destroy();
+                _location('短信删除成功','member_message.php');
+            }else{
+                _mysql_close();
+                _session_destroy();
+                _alert_back('短信删除失败');
+            }
+        }
+
+    }else{
+        _alert_back('此短信不存在');
+    }
+}
 if(isset($_GET['id'])){
     $_rows = _mysql_fetch_array("SELECT 
+                                    gb_id,
                                     gb_fromuser,
                                     gb_content,
                                     gb_date
@@ -25,6 +73,7 @@ if(isset($_GET['id'])){
                                     gb_id = '{$_GET['id']}'
                                 ");
     $_html = array();
+    $_html['id'] = $_rows['gb_id'];
     $_html['fromuser'] = $_rows['gb_fromuser'];
     $_html['content'] = $_rows['gb_content'];
     $_html['date'] = $_rows['gb_date'];
@@ -39,6 +88,7 @@ if(isset($_GET['id'])){
     <meta charset="UTF-8" />
     <?php require ROOT_PATH.'includes/title.inc.php';?>
     <title>留言簿--短信详情</title>
+    <script type="text/javascript" src="js/member_message_details.js"></script>
 </head>
 <body>
 <?php require ROOT_PATH.'includes/header.inc.php'?>
@@ -51,7 +101,7 @@ if(isset($_GET['id'])){
             <dd>发 信 人：<?php echo $_html['fromuser']?></dd>
             <dd>发信时间：<?php echo $_html['date']?></dd>
             <dd>内　　容：<strong><?php echo $_html['content']?></strong></dd>
-            <dd class="button"><input type="button" value="返回列表" onclick="javascript:history.back();"><input type="button" value="删除"></dd>
+            <dd class="button"><input type="button" value="返回列表"id="back"><input type="button" id="delete" name="<?php echo $_html['id']?>" value="删除短信"></dd>
         </dl>
     </div>
     <?php require ROOT_PATH.'includes/footer.inc.php';?>

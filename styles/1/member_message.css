@@ -9,6 +9,7 @@
     text-align: center;
     margin: 10px auto;
     background: #eee;
+    margin-bottom: 0;
 }
 #member #member_main table th,#member #member_main table td{
     height: 25px;
