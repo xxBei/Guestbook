@@ -48,11 +48,9 @@ if(@$_GET['action']=='delete' && isset($_GET['id'])){
                          ");
             if(_mysql_affected_rows() == 1){
                 _mysql_close();
-                _session_destroy();
                 _location('短信删除成功','member_message.php');
             }else{
                 _mysql_close();
-                _session_destroy();
                 _alert_back('短信删除失败');
             }
         }

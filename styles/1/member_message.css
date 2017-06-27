@@ -23,3 +23,12 @@
 #member #member_main table td a:hover{
     text-decoration: underline;
 }
+#member #member_main table td input#delete{
+    width:60px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    background: #fff;
+    border: 1px dashed #ccc;
+    margin-left: 20px;
+}

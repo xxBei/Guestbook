@@ -123,7 +123,7 @@ h2{
 
 #member #member_sidebar{
 	width: 300px;
-	height: 520px;
+	height: 550px;
 	margin: 15px;
 	border: 1px dashed #999;
 	float: left;
@@ -160,7 +160,7 @@ h2{
 }
 #member #member_main{
 	width: 590px;
-	height: 520px;
+	height: 550px;
 	margin: 15px;
 	border: 1px dashed #999;
 	float: right;
