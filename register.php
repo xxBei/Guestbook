@@ -19,7 +19,7 @@ if (@$_GET['action'] == 'register') {
     //为防止恶意注册，跨站攻击
     _check_code($_POST['code'], $_SESSION['code']);
     //引入校验文件
-    include ROOT_PATH . 'includes/register.func.php';
+    include ROOT_PATH . 'includes/check.func.php';
     //定义一个数组来存放表单数据
     $clean = array();
     //通过唯一标示符来防止恶意注册，伪装表单跨站攻击

@@ -228,7 +228,19 @@ function _check_uniqid($_first__uniqid,$_end_uniqid){
     return _mysql_string($_first__uniqid);
 }
 
-
+/**
+ * _check_content() 验证短信内容的长度
+ * @param $_string
+ * @param $_num_min
+ * @param $_num_max
+ * @return mixed
+ */
+function _check_content($_string,$_num_min,$_num_max){
+    if(mb_strlen($_string) < $_num_min || mb_strlen($_string) > $_num_max){
+        _alert_back('短信内容不得小于'.$_num_min.'位或大于'.$_num_max.'位');
+    }
+    return $_string;
+}
 
 
 

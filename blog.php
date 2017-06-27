@@ -8,6 +8,7 @@
  */
 //定义一个常量，防止恶意调用
 define('ROOT', true);
+//定义一个常量，用来区分不同页面的css样式的引用
 define('SCRIPT', 'blog');
 require dirname(__FILE__).'/includes/common.inc.php';
 //调用分页函数
@@ -15,7 +16,7 @@ global $_pagesize,$_pagenum;
 _page_main("SELECT gb_id FROM gb_manager WHERE gb_active IS NULL",15);
 //显示会员信息
 $_result = _mysql_query("SELECT gb_id,gb_username,gb_sex,gb_face FROM gb_manager WHERE gb_active IS NULL ORDER BY gb_reg_time DESC LIMIT $_pagenum,$_pagesize");
-//定义一个常量，用来区分不同页面的css样式的引用
+
 ?>
 <!doctype html>
 <html lang="en">

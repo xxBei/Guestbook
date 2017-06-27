@@ -11,8 +11,9 @@ define('ROOT', true);
 define('SCRIPT', 'member');
 require dirname(__FILE__).'/includes/common.inc.php';
 if(isset($_COOKIE['username'])){
-    $_result = _mysql_fetch_array("SELECT gb_username,gb_sex,gb_face,gb_email,gb_url,gb_qq,gb_reg_time,gb_level FROM gb_manager WHERE gb_username='{$_COOKIE['username']}' LIMIT 1");
+    $_result = _mysql_fetch_array("SELECT gb_id,gb_username,gb_sex,gb_face,gb_email,gb_url,gb_qq,gb_reg_time,gb_level FROM gb_manager WHERE gb_username='{$_COOKIE['username']}' LIMIT 1");
     $_html = array();
+    $_html['id'] = $_result['gb_id'];
     $_html['username'] = $_result['gb_username'];
     $_html['sex'] = $_result['gb_sex'];
     $_html['face'] = $_result['gb_face'];

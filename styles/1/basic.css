@@ -76,7 +76,7 @@ h2{
 #page{
 	clear: both;
 	height: 30px;
-	padding-top: 40px;
+	padding-top: 10px;
 	position: relative;
 }
 #page ul{
@@ -118,4 +118,50 @@ h2{
 }
 #textpage ul li a{
 	color: #000;
+}
+
+
+#member #member_sidebar{
+	width: 300px;
+	height: 520px;
+	margin: 15px;
+	border: 1px dashed #999;
+	float: left;
+}
+#member #member_sidebar dl{
+	width: 280px;
+	margin: 10px auto;
+}
+#member #member_sidebar dl dt{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 15px;
+	color: #fff;
+	font-weight: bold;
+	background: #666;
+}
+#member #member_sidebar dl dd{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #000;
+
+	background: #eee;
+}
+#member #member_sidebar dl dd a{
+	display: block;
+	color: #000;
+	text-decoration: none;
+}
+#member #member_sidebar dl dd a:hover{
+	background: #ccc;
+}
+#member #member_main{
+	width: 590px;
+	height: 520px;
+	margin: 15px;
+	border: 1px dashed #999;
+	float: right;
 }

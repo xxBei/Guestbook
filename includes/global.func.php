@@ -236,9 +236,9 @@ function _page_type($_type){
     echo '<ul>';
             for($i=1;$i<=$_pageabsolute;$i++){
                 if($_page == $i){
-                    echo '<li><a href="blog.php?page='.$i.'" class="selected">'.$i.'</a></li>';
+                    echo '<li><a href="'.SCRIPT.'.php?page='.$i.'" class="selected">'.$i.'</a></li>';
                 }else{
-                    echo '<li><a href="blog.php?page='.$i.'">'.$i.'</a></li>';
+                    echo '<li><a href="'.SCRIPT.'.php?page='.$i.'">'.$i.'</a></li>';
                 }
             }
     echo '</ul>';
@@ -308,6 +308,18 @@ function _mysql_string($_string){
         } else {
             $_string = addslashes($_string);
         }
+    }
+    return $_string;
+}
+
+/**
+ * _title() 截取标题
+ * @param $_string
+ * @return string
+ */
+function _title($_string){
+    if(mb_strlen($_string,'utf-8') > 14 ){
+        $_string = mb_substr($_string,1,14,'utf-8').'...';
     }
     return $_string;
 }

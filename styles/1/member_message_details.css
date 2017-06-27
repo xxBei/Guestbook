@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+#member #member_main h3{
+    background: #eee;
+    text-align: center;
+    font-size: 14px;
+    line-height: 25px;
+}
+#member #member_main dl{
+    width: 90%;
+    margin: 10px auto;
+}
+#member #member_main dl dd{
+    margin: 10px auto;
+    height: 150%;
+}
+#member #member_main dl dd.button{
+    text-align: center;
+}
+#member #member_main dl dd input{
+    margin-right: 20px;
+    height: 25px;
+    width: 70px;
+    background: #fff;
+    border: 2px dashed #ccc;
+    text-align: center;
+    line-height: 25px;
+    font-size: 12px;
+}

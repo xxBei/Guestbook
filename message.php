@@ -66,7 +66,6 @@ if(isset($_GET['id'])){
 }else{
     _alert_close('非法操作');
 }
-
 ?>
 <!doctype html>
 <html lang="en">
