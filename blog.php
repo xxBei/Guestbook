@@ -44,8 +44,8 @@ $_result = _mysql_query("SELECT gb_id,gb_username,gb_sex,gb_face FROM gb_manager
         <dl>
             <dd class="user"><?php echo $_html['username']?></dd>
             <dt><img src="<?php echo $_html['face']?>" alt="张三"></dt>
-            <dd class="message"><a href="#" name="message" title="<?php echo $_html['id']?>">发消息</a></dd>
-            <dd class="friend">加为好友</dd>
+            <dd class="message"><a href="javascript:;" name="message" title="<?php echo $_html['id']?>">发消息</a></dd>
+            <dd class="friend"><a href="javascript:;" name="friend" title="<?php echo $_html['id']?>">加为好友</a></dd>
             <dd class="guest">写留言</dd>
             <dd class="flower">送<?php
                     if($_html['sex'] == '男'){

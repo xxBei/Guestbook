@@ -141,9 +141,8 @@ function _location($_info,$_url){
  * @return void
  */
 function _session_destroy(){
-    if(session_start()){
         session_destroy();
-    }
+
 }
 
 /**
