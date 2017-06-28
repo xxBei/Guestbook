@@ -26,12 +26,26 @@ require  ROOT_PATH.'includes/mysql.func.php';
 //定义一个常量，常量为开始时间
 define('START_TIME', _runtime());
 
-
 //数据库连接
 _mysql_connect();
 _mysql_select_dbname();
 _mysql_charset();
 
-
+@$_message = _mysql_fetch_array("SELECT 
+                                              COUNT(*) 
+                                          AS 
+                                              count
+                                        FROM 
+                                              gb_message 
+                                       WHERE 
+                                              gb_touser='{$_COOKIE['username']}' 
+                                         AND 
+                                              gb_state = 0
+                                ");
+if(empty($_message['count'])){
+    $GLOBALS['message_count'] = '<strong class="read"><a href="member_message.php">(0)</a></strong>';
+}else{
+    $GLOBALS['message_count'] = '<strong class="noread"><a href="member_message.php"> ('.$_message['count'].')</a></strong>';
+}
 
 ?>

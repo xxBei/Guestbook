@@ -7,7 +7,7 @@ window.onload = function () {
   var back = document.getElementById('back');
   var del = document.getElementById('delete');
   back.onclick = function () {
-      history.back();
+      location.href = 'member_message.php';
   };
     del.onclick = function () {
       if(confirm('是否删除该条短信？')){

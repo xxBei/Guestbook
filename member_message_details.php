@@ -64,6 +64,7 @@ if(isset($_GET['id'])){
                                     gb_id,
                                     gb_fromuser,
                                     gb_content,
+                                    gb_state,
                                     gb_date
                               FROM
                                     gb_message
@@ -74,8 +75,23 @@ if(isset($_GET['id'])){
     $_html['id'] = $_rows['gb_id'];
     $_html['fromuser'] = $_rows['gb_fromuser'];
     $_html['content'] = $_rows['gb_content'];
+    $_html['state'] = $_rows['gb_state'];
     $_html['date'] = $_rows['gb_date'];
     $_html = _htmlspecialchars($_html);
+    if(empty($_html['state'])){
+        _mysql_query("UPDATE
+                                    gb_message 
+                               SET 
+                                    gb_state = '1'
+                               WHERE 
+                                     gb_id = '{$_GET['id']}'
+                               LIMIT 
+                                    1
+                   ");
+        if(!_mysql_affected_rows()){
+            _alert_back('异常');
+        }
+    }
 }else{
     _alert_back('非法登录');
 }

@@ -48,6 +48,16 @@ h2{
 	text-align: right;
 	margin: 0 0 0 10px;
 }
+#header ul li a strong.noread{
+	background: url("../../images/noread.png") no-repeat left center;
+	padding: 0 0 0 18px;
+	margin-left: 5px;
+}
+#header ul li a strong.read{
+	background: url("../../images/read.png") no-repeat left center;
+	padding: 0 0 0 18px;
+	margin-left: 5px;
+}
 #header ul li a{
 	text-decoration: none;
 	color:#000;
