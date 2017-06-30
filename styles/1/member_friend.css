@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+#member #member_main h2{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+#member #member_main table{
+    width: 90%;
+    text-align: center;
+    margin: 10px auto;
+    background: #eee;
+    margin-bottom: 0;
+}
+#member #member_main table th,#member #member_main table td{
+    height: 25px;
+    line-height: 25px;
+    background: #fff;
+}
+#member #member_main table td a{
+    text-decoration: none;
+    color: #666;
+}
+#member #member_main table td a:hover{
+    text-decoration: underline;
+}
+#member #member_main table td input#delete{
+    width:60px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    background: #fff;
+    border: 1px dashed #ccc;
+    margin-left: 20px;
+}
+#member #member_main table td input#add{
+    width:60px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    background: #fff;
+    border: 1px dashed #ccc;
+    margin-left: 20px;
+}
