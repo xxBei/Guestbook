@@ -31,7 +31,12 @@ if(@$_GET['action'] == 'write'){
     $_clean['fromuser'] = $_COOKIE['username'];
     $_clean['content'] = _check_content($_POST['content'],6,200);
     $_clean = _mysql_string($_clean);
-    //些人短信
+    //不能给自己发消息
+    if($_clean['touser'] == $_COOKIE['username']){
+        _alert_close('不能给自己发消息');
+        exit();
+    }
+    //写入短信
     _mysql_query("INSERT INTO gb_message(
                                                       gb_touser,
                                                       gb_fromuser,

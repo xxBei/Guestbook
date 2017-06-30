@@ -89,12 +89,12 @@ if($_pagenum < 0){
                         }
                 ?>
                 <tr><td><?php echo $_html['fromuser']?></td><td title="<?php echo $_html['content']?>"><?php echo _title($_html['content'])?></td><td><?php echo $_html['date']?></td><td>
-                        <a href="member_message_details.php?id=<?php echo $_html['id']?>"><?php echo $_html['state']?></a></td><td><input name="ids[]" value="<?php echo $_html['id']?>" type="checkbox"/></td></tr>
+                        <?php echo $_html['state']?></td><td><input name="ids[]" value="<?php echo $_html['id']?>" type="checkbox"/></td></tr>
                 <?php
                     }
                     _mysql_free_result($_result);
                 ?>
-                <tr><td colspan="5"><label for="all">全选<input type="checkbox" name="chkall" id="all"></label><input type="submit" id="delete" value="批量删除" name="delete"><input type="submit" id="add" value="添加" name="add"></td></tr>
+                <tr><td colspan="5"><label for="all">全选<input type="checkbox" name="chkall" id="all"></label><input type="submit" id="delete" value="批量删除" name="delete"><input type="button" id="add" value="添加" name="add"></td></tr>
             </table>
         </form>
         <?php
