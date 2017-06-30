@@ -14,10 +14,11 @@ require dirname(__FILE__).'/includes/common.inc.php';
 if(!isset($_COOKIE['username'])){
     _alert_back('请先登录');
 }
+//验证好友
 if(@$_GET['action']=='add' && isset($_GET['id'])){
-    $_uniqid_row = _mysql_fetch_array("SELECT gb_uniqid FROM gb_manager WHERE gb_username = '{$_COOKIE['username']}'");
-    if(!!$_uniqid_row){
-        _uniqid($_COOKIE['uniqid'],$_uniqid_row['gb_uniqid']);
+    $_uniqid_row1 = _mysql_fetch_array("SELECT gb_uniqid FROM gb_manager WHERE gb_username = '{$_COOKIE['username']}'");
+    if(!!$_uniqid_row1){
+        _uniqid($_COOKIE['uniqid'],$_uniqid_row1['gb_uniqid']);
         //验证好友
         $_result1 = _mysql_fetch_array("SELECT gb_state FROM gb_friend WHERE gb_id = '{$_GET['id']}'");
         if($_result1['gb_state'] == '1'){
@@ -34,6 +35,34 @@ if(@$_GET['action']=='add' && isset($_GET['id'])){
         $_result2 = _mysql_fetch_array("SELECT gb_touser FROM gb_friend WHERE gb_id = '{$_GET['id']}'");
         if($_result2['gb_touser'] != $_COOKIE['username']){
             _location('你没有权限','member_friend.php');
+        }
+    }else{
+        _alert_back('非法登录');
+    }
+}
+//批量删除好友
+if(@$_GET['action'] == 'delete' && empty($_POST['ids'])){
+    _alert_back('至少选择一个');
+}
+if(@$_GET['action'] == 'delete' && isset($_POST['ids'])){
+    $_clean = array();
+    $_clean['id'] = _mysql_string(implode(',',$_POST['ids']));
+    $_uniqid_row2 = _mysql_fetch_array("SELECT gb_uniqid FROM gb_manager WHERE gb_username = '{$_COOKIE['username']}'");
+    if(!!$_uniqid_row2){
+        //验证唯一标识符
+        _uniqid($_COOKIE['uniqid'],$_uniqid_row2['gb_uniqid']);
+        //删除好友
+        _mysql_query("DELETE FROM 
+                                          gb_friend 
+                                    WHERE 
+                                          gb_id
+                                    IN ({$_clean['id']})");
+        if(_mysql_affected_rows()){
+            _mysql_close();
+            _location('删除好友成功','member_friend.php');
+        }else{
+            _mysql_close();
+            _alert_back('删除好友失败');
         }
     }else{
         _alert_back('非法登录');
@@ -88,7 +117,7 @@ if($_pagenum < 0){
     <?php include ROOT_PATH."includes/member.inc.php";?>
     <div id="member_main">
         <h2>好友管理中心</h2>
-        <form action="?action=add" method="post">
+        <form action="?action=delete" method="post">
             <table cellspacing="1">
                 <tr><th>好友</th><th>请求内容</th><th>时间</th><th>状态</th><th>操作</th></tr>
                 <?php

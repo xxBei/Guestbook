@@ -38,6 +38,7 @@ if(@$_GET['action'] == 'delete' && isset($_POST['ids'])){
                                               1
                                 ");
     if(!!$_rows){
+        _uniqid($_COOKIE['uniqid'],$_rows['gb_uniqid']);
          //批量删除短信
          _mysql_query("DELETE FROM 
                                           gb_message 

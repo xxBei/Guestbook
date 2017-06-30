@@ -13,7 +13,7 @@ window.onload = function () {
     }
   };
   fm.onsubmit = function () {
-      if(confirm('是否删除选中的短信')){
+      if(confirm('是否删除选中的数据？')){
           return true
       }
       return false;
