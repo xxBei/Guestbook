@@ -16,11 +16,11 @@ if(!isset($_COOKIE['username'])){
 }
 //验证好友
 if(@$_GET['action']=='add' && isset($_GET['id'])){
-    $_uniqid_row1 = _mysql_fetch_array("SELECT gb_uniqid FROM gb_manager WHERE gb_username = '{$_COOKIE['username']}'");
+    $_uniqid_row1 = _mysql_fetch_array("SELECT gb_uniqid FROM gb_manager WHERE gb_username = '{$_COOKIE['username']}' LIMIT 1");
     if(!!$_uniqid_row1){
         _uniqid($_COOKIE['uniqid'],$_uniqid_row1['gb_uniqid']);
         //验证好友
-        $_result1 = _mysql_fetch_array("SELECT gb_state FROM gb_friend WHERE gb_id = '{$_GET['id']}'");
+        $_result1 = _mysql_fetch_array("SELECT gb_state FROM gb_friend WHERE gb_id = '{$_GET['id']}' LIMIT 1");
         if($_result1['gb_state'] == '1'){
             _alert_back('你们已经是好友了');
         }
@@ -32,7 +32,7 @@ if(@$_GET['action']=='add' && isset($_GET['id'])){
             _mysql_close();
             _alert_back('验证失败');
         }
-        $_result2 = _mysql_fetch_array("SELECT gb_touser FROM gb_friend WHERE gb_id = '{$_GET['id']}'");
+        $_result2 = _mysql_fetch_array("SELECT gb_touser FROM gb_friend WHERE gb_id = '{$_GET['id']}' LIMIT 1");
         if($_result2['gb_touser'] != $_COOKIE['username']){
             _location('你没有权限','member_friend.php');
         }
@@ -47,7 +47,7 @@ if(@$_GET['action'] == 'delete' && empty($_POST['ids'])){
 if(@$_GET['action'] == 'delete' && isset($_POST['ids'])){
     $_clean = array();
     $_clean['id'] = _mysql_string(implode(',',$_POST['ids']));
-    $_uniqid_row2 = _mysql_fetch_array("SELECT gb_uniqid FROM gb_manager WHERE gb_username = '{$_COOKIE['username']}'");
+    $_uniqid_row2 = _mysql_fetch_array("SELECT gb_uniqid FROM gb_manager WHERE gb_username = '{$_COOKIE['username']}' LIMIT 1");
     if(!!$_uniqid_row2){
         //验证唯一标识符
         _uniqid($_COOKIE['uniqid'],$_uniqid_row2['gb_uniqid']);
@@ -77,7 +77,9 @@ _page_main("SELECT
                    WHERE 
                           gb_touser='{$_COOKIE['username']}' 
                    OR 
-                          gb_fromuser='{$_COOKIE['username']}'",
+                          gb_fromuser='{$_COOKIE['username']}'
+                   LIMIT
+                          1",
             15);
 //显示好友列表
 if($_pagenum < 0){
