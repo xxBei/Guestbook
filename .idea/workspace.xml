@@ -4,7 +4,6 @@
     <list default="true" id="1dd901b7-c0ca-4b5e-a64f-e140a55fae93" name="默认" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member_friend.php" afterPath="$PROJECT_DIR$/member_friend.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/message.php" afterPath="$PROJECT_DIR$/message.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,7 +26,39 @@
     <favorites_list name="Guestbooks" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="member_friend.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/member_friend.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+              <folding>
+                <marker date="1498812898732" expanded="true" signature="421:475" ph="SELECT gb_un... gb_manager" />
+                <marker date="1498812898732" expanded="true" signature="421:498" ph="SELECT gb_un... gb_manager" />
+                <marker date="1498812898732" expanded="true" signature="644:704" ph="SELECT gb_st... gb_friend" />
+                <marker date="1498812898732" expanded="true" signature="819:870" ph="UPDATE gb_fr... " />
+                <marker date="1498812898732" expanded="true" signature="819:884" ph="UPDATE gb_fr... " />
+                <marker date="1498812898732" expanded="true" signature="819:902" ph="UPDATE gb_fr... " />
+                <marker date="1498812898732" expanded="true" signature="819:925" ph="UPDATE gb_fr... " />
+                <marker date="1498812898732" expanded="true" signature="1175:1203" ph="SELECT gb_to... gb_fri" />
+                <marker date="1498812898732" expanded="true" signature="1175:1220" ph="SELECT gb_to... gb_friend" />
+                <marker date="1498812898732" expanded="true" signature="1175:1222" ph="SELECT gb_to... gb_friend" />
+                <marker date="1498812898732" expanded="true" signature="1175:1236" ph="SELECT gb_to... gb_friend" />
+                <marker date="1498812898732" expanded="true" signature="1460:1626" ph="SELECT gb_id... gb_friend" />
+                <marker date="1498812898732" expanded="true" signature="1460:1649" ph="SELECT gb_id... gb_friend" />
+                <marker date="1498812898732" expanded="true" signature="1460:1736" ph="SELECT gb_id... gb_friend" />
+                <marker date="1498812898732" expanded="true" signature="1839:2584" ph="SELECT gb_id... gb_friend" />
+                <marker date="1498812898732" expanded="true" signature="2642:2661" ph="..." />
+                <marker date="1498812898732" expanded="true" signature="4147:4162" ph="..." />
+                <marker date="1498812898732" expanded="true" signature="4277:4289" ph="..." />
+                <marker date="1498812898732" expanded="true" signature="4596:4606" ph="..." />
+                <marker date="1498812898732" expanded="true" signature="4722:4734" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -99,8 +130,8 @@
         <option value="$PROJECT_DIR$/styles/1/member_friend.css" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/member_message.php" />
-        <option value="$PROJECT_DIR$/member_friend.php" />
         <option value="$PROJECT_DIR$/message.php" />
+        <option value="$PROJECT_DIR$/member_friend.php" />
       </list>
     </option>
   </component>
@@ -305,7 +336,7 @@
       <workItem from="1498628140655" duration="12236000" />
       <workItem from="1498700812942" duration="658000" />
       <workItem from="1498785561904" duration="5156000" />
-      <workItem from="1498790866328" duration="6717000" />
+      <workItem from="1498790866328" duration="13483000" />
     </task>
     <task id="LOCAL-00001" summary="phpStorm操作">
       <created>1496829025646</created>
@@ -517,11 +548,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498803939724</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="修改给自己发消息的问题">
+      <created>1498804564593</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1498804564593</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178961000" />
+    <option name="totallyTimeSpent" value="185727000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -534,8 +572,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1580938" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1580938" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -616,7 +655,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="新增登录页面" />
     <MESSAGE value="登录页面服务器端验证，登录时查询数据库验证是否存在改数据" />
     <MESSAGE value="新增登录状态下不能注册和登录，未登录情况下不显示退出，实现通过查询数据库来登录，并且可以保存cookie" />
     <MESSAGE value="博友页面的小图标" />
@@ -641,7 +679,8 @@
     <MESSAGE value="新增短信提醒，可以在不同的页面中显示出有几条消息未读" />
     <MESSAGE value="新增添加好友" />
     <MESSAGE value="修改了没有短信或者好友请求时报错，新增了好友请求列表" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了没有短信或者好友请求时报错，新增了好友请求列表" />
+    <MESSAGE value="修改给自己发消息的问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改给自己发消息的问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1042,39 +1081,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/member_friend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="98" column="15" lean-forward="true" selection-start-line="98" selection-start-column="15" selection-end-line="98" selection-end-column="15" />
-          <folding>
-            <marker date="1498804059235" expanded="true" signature="535:927" ph="SELECT gb_un... gb_friend" />
-            <marker date="1498804059235" expanded="true" signature="1016:1061" ph="SELECT gb_id... gb_friend" />
-            <marker date="1498804059235" expanded="true" signature="1016:1084" ph="SELECT gb_id... gb_friend" />
-            <marker date="1498804059235" expanded="true" signature="1174:1807" ph="SELECT gb_id... gb_friend" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/friend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="38" column="53" lean-forward="true" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
-          <folding>
-            <marker date="1498642711535" expanded="true" signature="542:929" ph="SELECT gb_un... gb_manager" />
-            <marker date="1498642711535" expanded="true" signature="1448:1742" ph="SELECT gb_id... gb_friend" />
-            <marker date="1498642711535" expanded="true" signature="1448:1802" ph="SELECT gb_id... gb_friend" />
-            <marker date="1498642711535" expanded="true" signature="1448:1982" ph="SELECT gb_id... gb_friend" />
-            <marker date="1498642711535" expanded="true" signature="2163:2983" ph="INSERT INTO gb_friend... " />
-            <marker date="1498642711535" expanded="true" signature="3444:3516" ph="SELECT gb_us... gb_manager" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1124,6 +1135,50 @@
             <marker date="1498803846908" expanded="true" signature="1773:1842" ph="SELECT gb_id... gb_message" />
             <marker date="1498803846908" expanded="true" signature="1932:2565" ph="SELECT gb_id... gb_message" />
             <marker date="1498803846908" expanded="true" signature="2622:2641" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="38" column="53" lean-forward="true" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+          <folding>
+            <marker date="1498642711535" expanded="true" signature="542:929" ph="SELECT gb_un... gb_manager" />
+            <marker date="1498642711535" expanded="true" signature="1448:1742" ph="SELECT gb_id... gb_friend" />
+            <marker date="1498642711535" expanded="true" signature="1448:1802" ph="SELECT gb_id... gb_friend" />
+            <marker date="1498642711535" expanded="true" signature="1448:1982" ph="SELECT gb_id... gb_friend" />
+            <marker date="1498642711535" expanded="true" signature="2163:2983" ph="INSERT INTO gb_friend... " />
+            <marker date="1498642711535" expanded="true" signature="3444:3516" ph="SELECT gb_us... gb_manager" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/member_friend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <folding>
+            <marker date="1498812898732" expanded="true" signature="421:475" ph="SELECT gb_un... gb_manager" />
+            <marker date="1498812898732" expanded="true" signature="421:498" ph="SELECT gb_un... gb_manager" />
+            <marker date="1498812898732" expanded="true" signature="644:704" ph="SELECT gb_st... gb_friend" />
+            <marker date="1498812898732" expanded="true" signature="819:870" ph="UPDATE gb_fr... " />
+            <marker date="1498812898732" expanded="true" signature="819:884" ph="UPDATE gb_fr... " />
+            <marker date="1498812898732" expanded="true" signature="819:902" ph="UPDATE gb_fr... " />
+            <marker date="1498812898732" expanded="true" signature="819:925" ph="UPDATE gb_fr... " />
+            <marker date="1498812898732" expanded="true" signature="1175:1203" ph="SELECT gb_to... gb_fri" />
+            <marker date="1498812898732" expanded="true" signature="1175:1220" ph="SELECT gb_to... gb_friend" />
+            <marker date="1498812898732" expanded="true" signature="1175:1222" ph="SELECT gb_to... gb_friend" />
+            <marker date="1498812898732" expanded="true" signature="1175:1236" ph="SELECT gb_to... gb_friend" />
+            <marker date="1498812898732" expanded="true" signature="1460:1626" ph="SELECT gb_id... gb_friend" />
+            <marker date="1498812898732" expanded="true" signature="1460:1649" ph="SELECT gb_id... gb_friend" />
+            <marker date="1498812898732" expanded="true" signature="1460:1736" ph="SELECT gb_id... gb_friend" />
+            <marker date="1498812898732" expanded="true" signature="1839:2584" ph="SELECT gb_id... gb_friend" />
+            <marker date="1498812898732" expanded="true" signature="2642:2661" ph="..." />
+            <marker date="1498812898732" expanded="true" signature="4147:4162" ph="..." />
+            <marker date="1498812898732" expanded="true" signature="4277:4289" ph="..." />
+            <marker date="1498812898732" expanded="true" signature="4596:4606" ph="..." />
+            <marker date="1498812898732" expanded="true" signature="4722:4734" ph="..." />
           </folding>
         </state>
       </provider>
