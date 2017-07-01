@@ -7,6 +7,7 @@
 window.onload = function () {
     var message = document.getElementsByName('message');
     var friend = document.getElementsByName('friend');
+    var flower = document.getElementsByName('flower');
     for(var i=0;i<message.length;i++){
         message[i].onclick = function () {
             centerWindow('message.php?id='+this.title,'message',500,300);
@@ -15,6 +16,11 @@ window.onload = function () {
     for(var i=0;i<friend.length;i++){
         friend[i].onclick = function () {
             centerWindow('friend.php?id='+this.title,'friend',500,300);
+        };
+    }
+    for(var i=0;i<flower.length;i++){
+        flower[i].onclick = function () {
+            centerWindow('flower.php?id='+this.title,'flower',500,300);
         };
     }
 };

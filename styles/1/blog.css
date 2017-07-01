@@ -46,6 +46,14 @@
     color: #f00;
     font-weight: bold;
 }
+#blog dl dd.flower a{
+    text-decoration: none;
+    color: black;
+}
+#blog dl dd.flower a:hover{
+    color: #f00;
+    font-weight: bold;
+}
 #blog dl dd.friend{
     background: url("../../images/friend_add.png") no-repeat -3% 62%;
 }

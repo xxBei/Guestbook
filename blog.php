@@ -33,8 +33,8 @@ $_result = _mysql_query("SELECT gb_id,gb_username,gb_sex,gb_face FROM gb_manager
         <h2>博友页面</h2>
 
         <?php
-            while($_rows = _mysql_fetch_array_list($_result)){
             $_html = array();
+            while($_rows = _mysql_fetch_array_list($_result)){
             $_html['id'] = $_rows['gb_id'];
             $_html['username'] = $_rows['gb_username'];
             $_html['face'] = $_rows['gb_face'];
@@ -47,12 +47,12 @@ $_result = _mysql_query("SELECT gb_id,gb_username,gb_sex,gb_face FROM gb_manager
             <dd class="message"><a href="javascript:;" name="message" title="<?php echo $_html['id']?>">发消息</a></dd>
             <dd class="friend"><a href="javascript:;" name="friend" title="<?php echo $_html['id']?>">加为好友</a></dd>
             <dd class="guest">写留言</dd>
-            <dd class="flower">送<?php
+            <dd class="flower"><a href="javascript:;" name="flower" title="<?php echo $_html['id']?>">送<?php
                     if($_html['sex'] == '男'){
                         echo '他';
                     }else{
                         echo '她';
-                    } ?>鲜花</dd>
+                    } ?>鲜花</a></dd>
         </dl>
         <?php }
             _mysql_free_result($_result);

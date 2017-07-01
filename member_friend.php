@@ -20,9 +20,12 @@ if(@$_GET['action']=='add' && isset($_GET['id'])){
     if(!!$_uniqid_row1){
         _uniqid($_COOKIE['uniqid'],$_uniqid_row1['gb_uniqid']);
         //验证好友
-        $_result1 = _mysql_fetch_array("SELECT gb_state FROM gb_friend WHERE gb_id = '{$_GET['id']}' LIMIT 1");
+        $_result1 = _mysql_fetch_array("SELECT gb_state,gb_touser FROM gb_friend WHERE gb_id = '{$_GET['id']}' LIMIT 1");
         if($_result1['gb_state'] == '1'){
             _alert_back('你们已经是好友了');
+        }
+        if($_result1['gb_touser'] != $_COOKIE['username']){
+            _location('你没有权限','member_friend.php');
         }
         _mysql_query("UPDATE gb_friend SET gb_state = '1' WHERE gb_id = '{$_GET['id']}' AND gb_touser = '{$_COOKIE['username']}'");
         if(_mysql_affected_rows() == 1){
@@ -32,10 +35,7 @@ if(@$_GET['action']=='add' && isset($_GET['id'])){
             _mysql_close();
             _alert_back('验证失败');
         }
-        $_result2 = _mysql_fetch_array("SELECT gb_touser FROM gb_friend WHERE gb_id = '{$_GET['id']}' LIMIT 1");
-        if($_result2['gb_touser'] != $_COOKIE['username']){
-            _location('你没有权限','member_friend.php');
-        }
+
     }else{
         _alert_back('非法登录');
     }
@@ -102,7 +102,6 @@ if($_pagenum < 0){
                                  LIMIT
                                       $_pagenum,$_pagesize");
 }
-
 ?>
 <!doctype html>
 <html lang="en">
