@@ -122,7 +122,7 @@ if($_pagenum < 0){
                     }
                     _mysql_free_result($_result);
                 ?>
-                <tr><td colspan="5">共<?php echo $_html['counts']?></td></tr>
+                <tr><td colspan="5">共 <strong style="color: #ff4f10;"><?php echo $_html['counts']?></strong> 朵鲜花</td></tr>
                 <tr><td colspan="5"><label for="all">全选<input type="checkbox" name="chkall" id="all"></label><input type="submit" id="delete" value="批量删除" name="delete"></td></tr>
             </table>
         </form>

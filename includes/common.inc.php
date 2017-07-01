@@ -30,7 +30,7 @@ define('START_TIME', _runtime());
 _mysql_connect();
 _mysql_select_dbname();
 _mysql_charset();
-
+//未读短信显示操作
 @$_message = _mysql_fetch_array("SELECT 
                                               COUNT(*) 
                                           AS 
