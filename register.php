@@ -57,7 +57,7 @@ if (@$_GET['action'] == 'register') {
                                         gb_face,
                                         gb_reg_time,
                                         gb_last_time,
-                                        gb_last_id
+                                        gb_last_ip
                                     )
                             VALUES(
                                         '{$clean['uniqid']}',
@@ -76,8 +76,11 @@ if (@$_GET['action'] == 'register') {
                                         '{$_SERVER["REMOTE_ADDR"]}'
                                     )");
     if (_mysql_affected_rows() == 1) {
+        $clean['id'] = _mysql_insert_id();//获取新增的ID
         _mysql_close();
         _session_destroy();
+        //生成XML文件
+        _set_xml('new.xml',$clean);
         _location('恭喜你，注册成功', 'active.php?active=' . $clean['active']);
     } else {
         _mysql_close();

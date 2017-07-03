@@ -324,4 +324,38 @@ function _title($_string){
     }
     return $_string;
 }
+
+/**
+ * _set_xml() 生成xml文件
+ * @access public
+ * @return void
+ */
+function _set_xml($_xmlFile,$_clean){
+    $_fp = fopen($_xmlFile,'w');
+    if(!$_fp){
+        echo '系统报错，文件不存在';
+        exit();
+    }
+    flock($_fp,LOCK_EX);
+    $_string = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
+    fwrite($_fp,$_string,strlen($_string));
+    $_string = "<vip>\n";
+    fwrite($_fp,$_string,strlen($_string));
+    $_string = "\t<id>{$_clean['id']}</id>\n";
+    fwrite($_fp,$_string,strlen($_string));
+    $_string = "\t<username>{$_clean['username']}</username>\n";
+    fwrite($_fp,$_string,strlen($_string));
+    $_string = "\t<sex>{$_clean['sex']}</sex>\n";
+    fwrite($_fp,$_string,strlen($_string));
+    $_string = "\t<face>{$_clean['faces']}</face>\n";
+    fwrite($_fp,$_string,strlen($_string));
+    $_string = "\t<email>{$_clean['email']}</email>\n";
+    fwrite($_fp,$_string,strlen($_string));
+    $_string = "\t<url>{$_clean['url']}</url>\n";
+    fwrite($_fp,$_string,strlen($_string));
+    $_string = "</vip>\n";
+    fwrite($_fp,$_string,strlen($_string));
+    flock($_fp,LOCK_UN);
+    fclose($_fp);
+}
 ?>

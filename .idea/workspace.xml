@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1dd901b7-c0ca-4b5e-a64f-e140a55fae93" name="默认" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/common.inc.php" afterPath="$PROJECT_DIR$/includes/common.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member_flower.php" afterPath="$PROJECT_DIR$/member_flower.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/global.func.php" afterPath="$PROJECT_DIR$/includes/global.func.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/mysql.func.php" afterPath="$PROJECT_DIR$/includes/mysql.func.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register.php" afterPath="$PROJECT_DIR$/register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/1/index.css" afterPath="$PROJECT_DIR$/styles/1/index.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,52 +30,37 @@
     <favorites_list name="Guestbooks" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="member_flower.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/member_flower.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="global.func.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/global.func.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
-              <caret line="127" column="15" lean-forward="true" selection-start-line="127" selection-start-column="15" selection-end-line="127" selection-end-column="15" />
-              <folding>
-                <element signature="n#style#0;n#strong#0;n#td#0;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1498880199347" expanded="true" signature="753:1146" ph="SELECT gb_un... gb_manager" />
-                <marker date="1498880199347" expanded="true" signature="1299:1513" ph="DELETE FROM " />
-                <marker date="1498880199347" expanded="true" signature="1828:1896" ph="SELECT gb_id... gb_message" />
-                <marker date="1498880199347" expanded="true" signature="1986:2672" ph="SELECT gb_id... gb_message" />
-              </folding>
+              <caret line="351" column="43" lean-forward="false" selection-start-line="351" selection-start-column="43" selection-end-line="351" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.inc.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/common.inc.php">
+      <file leaf-file-name="register.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+            <state relative-caret-position="260">
+              <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
               <folding>
-                <marker date="1498880305420" expanded="true" signature="722:1220" ph="SELECT COUNT... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="flower.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flower.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="98" column="26" lean-forward="false" selection-start-line="98" selection-start-column="26" selection-end-line="98" selection-end-column="26" />
-              <folding>
-                <marker date="1498879868918" expanded="true" signature="581:658" ph="SELECT gb_un... gb_manager" />
-                <marker date="1498879868918" expanded="true" signature="1175:1788" ph="INSERT INTO gb_flower... " />
-                <marker date="1498879868918" expanded="true" signature="1175:2001" ph="INSERT INTO gb_message... " />
-                <marker date="1498879868918" expanded="true" signature="2293:2365" ph="SELECT gb_us... gb_manager" />
-                <marker date="1498879868918" expanded="true" signature="2607:2673" ph="..." />
-                <marker date="1498879868918" expanded="true" signature="2614:2633" ph="..." />
-                <marker date="1498879868918" expanded="true" signature="2614:2673" ph="..." />
-                <marker date="1498879868918" expanded="true" signature="2871:3039" ph="..." />
-                <marker date="1498879868918" expanded="true" signature="2894:3039" ph="..." />
-                <marker date="1498879868918" expanded="true" signature="2966:3039" ph="..." />
-                <marker date="1498879868918" expanded="true" signature="3069:3178" ph="..." />
+                <element signature="e#6#125#0#PHP" expanded="false" />
+                <marker date="1499050513173" expanded="true" signature="1354:1431" ph="SELECT gb_us... gb_manager" />
+                <marker date="1499050513173" expanded="true" signature="1354:1439" ph="SELECT gb_us... gb_manager" />
+                <marker date="1499050513173" expanded="true" signature="1510:3195" ph="INSERT INTO gb_manager... " />
               </folding>
             </state>
           </provider>
@@ -97,6 +85,7 @@
       <find>mess</find>
       <find>message</find>
       <find>a</find>
+      <find>blog</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -118,14 +107,12 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/js/login.js" />
         <option value="$PROJECT_DIR$/includes/login.func.php" />
-        <option value="$PROJECT_DIR$/includes/mysql.func.php" />
         <option value="$PROJECT_DIR$/member.modify.php" />
         <option value="$PROJECT_DIR$/styles/1/member_modify.css" />
         <option value="$PROJECT_DIR$/includes/register.func.php" />
         <option value="$PROJECT_DIR$/js/register.js" />
         <option value="$PROJECT_DIR$/js/member_modify.js" />
         <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/register.php" />
         <option value="$PROJECT_DIR$/styles/1/message.css" />
         <option value="$PROJECT_DIR$/includes/check.func.php" />
         <option value="$PROJECT_DIR$/js/message.js" />
@@ -139,10 +126,8 @@
         <option value="$PROJECT_DIR$/includes/header.inc.php" />
         <option value="$PROJECT_DIR$/styles/1/basic.css" />
         <option value="$PROJECT_DIR$/member_message_details.php" />
-        <option value="$PROJECT_DIR$/includes/global.func.php" />
         <option value="$PROJECT_DIR$/friend.php" />
         <option value="$PROJECT_DIR$/styles/1/member_friend.css" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/member_message.php" />
         <option value="$PROJECT_DIR$/js/member_message.js" />
         <option value="$PROJECT_DIR$/member_friend.php" />
@@ -155,6 +140,12 @@
         <option value="$PROJECT_DIR$/flower.php" />
         <option value="$PROJECT_DIR$/member_flower.php" />
         <option value="$PROJECT_DIR$/includes/common.inc.php" />
+        <option value="$PROJECT_DIR$/styles/1/index.css" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/testxml.php" />
+        <option value="$PROJECT_DIR$/includes/mysql.func.php" />
+        <option value="$PROJECT_DIR$/includes/global.func.php" />
+        <option value="$PROJECT_DIR$/register.php" />
       </list>
     </option>
   </component>
@@ -193,6 +184,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -221,7 +213,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -375,7 +366,8 @@
       <workItem from="1498700812942" duration="658000" />
       <workItem from="1498785561904" duration="5156000" />
       <workItem from="1498790866328" duration="16469000" />
-      <workItem from="1498872638314" duration="6008000" />
+      <workItem from="1498872638314" duration="8253000" />
+      <workItem from="1499045855355" duration="4762000" />
     </task>
     <task id="LOCAL-00001" summary="phpStorm操作">
       <created>1496829025646</created>
@@ -622,11 +614,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498880016806</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="优化页面，新增一些注释">
+      <created>1498880321597</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1498880321597</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194721000" />
+    <option name="totallyTimeSpent" value="201728000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -641,7 +640,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1603631" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16263238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -722,7 +721,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改部分中文为敏感字符问题，去掉中文空格在验证用户名的时候" />
     <MESSAGE value="新增分页处理，每次只显示10条数据" />
     <MESSAGE value="将分页样式放到了basic.css中" />
     <MESSAGE value="分页容错处理：数据库中无数据的时候显示第一页，地址栏为空、字符串、小于零的时候都显示第一页；地址栏中page为小数的时候进行了取整数操作intval()" />
@@ -747,17 +745,11 @@
     <MESSAGE value="实现好友列表中删除操作" />
     <MESSAGE value="修改查询中加锁操作(LIMIT 1)" />
     <MESSAGE value="修改之前的一些bug，并完成送花和查询花朵的操作" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改之前的一些bug，并完成送花和查询花朵的操作" />
+    <MESSAGE value="优化页面，新增一些注释" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化页面，新增一些注释" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/index.php</url>
-          <line>25</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -766,20 +758,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/styles/1/active.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/login.func.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/1/member_modify.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
@@ -953,19 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-407">
-          <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
-          <folding>
-            <element signature="e#6#125#0#PHP" expanded="false" />
-            <marker date="1498466571841" expanded="true" signature="1354:1431" ph="SELECT gb_us... gb_manager" />
-            <marker date="1498466571841" expanded="true" signature="1354:1439" ph="SELECT gb_us... gb_manager" />
-            <marker date="1498466571841" expanded="true" signature="1510:3195" ph="INSERT INTO gb_manager... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/install/guestbooks.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -1036,14 +1001,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/mysql.func.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/title.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -1056,22 +1013,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="40" column="6" lean-forward="false" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/global.func.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="201" column="0" lean-forward="false" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1115,14 +1056,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/1/blog.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="51" column="1" lean-forward="true" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/member.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -1135,7 +1068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1143,7 +1075,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1151,7 +1082,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1159,7 +1089,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1167,26 +1096,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/blog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="56" column="15" lean-forward="true" selection-start-line="56" selection-start-column="15" selection-end-line="56" selection-end-column="15" />
-          <folding>
-            <marker date="1498876068322" expanded="true" signature="327:379" ph="SELECT gb_id... gb_manager" />
-            <marker date="1498876068322" expanded="true" signature="420:542" ph="SELECT gb_id... gb_manager" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1214,36 +1123,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="478">
           <caret line="56" column="24" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flower.php">
+    <entry file="file://$PROJECT_DIR$/includes/common.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="98" column="26" lean-forward="false" selection-start-line="98" selection-start-column="26" selection-end-line="98" selection-end-column="26" />
+        <state relative-caret-position="620">
+          <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
           <folding>
-            <marker date="1498879868918" expanded="true" signature="581:658" ph="SELECT gb_un... gb_manager" />
-            <marker date="1498879868918" expanded="true" signature="1175:1788" ph="INSERT INTO gb_flower... " />
-            <marker date="1498879868918" expanded="true" signature="1175:2001" ph="INSERT INTO gb_message... " />
-            <marker date="1498879868918" expanded="true" signature="2293:2365" ph="SELECT gb_us... gb_manager" />
-            <marker date="1498879868918" expanded="true" signature="2607:2673" ph="..." />
-            <marker date="1498879868918" expanded="true" signature="2614:2633" ph="..." />
-            <marker date="1498879868918" expanded="true" signature="2614:2673" ph="..." />
-            <marker date="1498879868918" expanded="true" signature="2871:3039" ph="..." />
-            <marker date="1498879868918" expanded="true" signature="2894:3039" ph="..." />
-            <marker date="1498879868918" expanded="true" signature="2966:3039" ph="..." />
-            <marker date="1498879868918" expanded="true" signature="3069:3178" ph="..." />
+            <marker date="1498880333971" expanded="true" signature="722:1220" ph="SELECT COUNT... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/member_flower.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="127" column="15" lean-forward="true" selection-start-line="127" selection-start-column="15" selection-end-line="127" selection-end-column="15" />
+        <state relative-caret-position="282">
+          <caret line="91" column="17" lean-forward="false" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="17" />
           <folding>
-            <element signature="n#style#0;n#strong#0;n#td#0;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <marker date="1498880199347" expanded="true" signature="753:1146" ph="SELECT gb_un... gb_manager" />
             <marker date="1498880199347" expanded="true" signature="1299:1513" ph="DELETE FROM " />
             <marker date="1498880199347" expanded="true" signature="1828:1896" ph="SELECT gb_id... gb_message" />
@@ -1252,12 +1149,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/common.inc.php">
+    <entry file="file://$PROJECT_DIR$/flower.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+        <state relative-caret-position="360">
+          <caret line="100" column="21" lean-forward="true" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
           <folding>
-            <marker date="1498880305420" expanded="true" signature="722:1220" ph="SELECT COUNT... " />
+            <marker date="1498879868918" expanded="true" signature="581:658" ph="SELECT gb_un... gb_manager" />
+            <marker date="1498879868918" expanded="true" signature="1175:1788" ph="INSERT INTO gb_flower... " />
+            <marker date="1498879868918" expanded="true" signature="1175:2001" ph="INSERT INTO gb_message... " />
+            <marker date="1498879868918" expanded="true" signature="2293:2365" ph="SELECT gb_us... gb_manager" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="43" column="8" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="55" selection-end-column="13" />
+          <folding>
+            <marker date="1498876068322" expanded="true" signature="327:379" ph="SELECT gb_id... gb_manager" />
+            <marker date="1498876068322" expanded="true" signature="420:542" ph="SELECT gb_id... gb_manager" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/1/blog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="73" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/blog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/1/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testxml.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" column="17" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="26" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/mysql.func.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="127" column="30" lean-forward="true" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/global.func.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="351" column="43" lean-forward="false" selection-start-line="351" selection-start-column="43" selection-end-line="351" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+          <folding>
+            <element signature="e#6#125#0#PHP" expanded="false" />
+            <marker date="1499050513173" expanded="true" signature="1354:1431" ph="SELECT gb_us... gb_manager" />
+            <marker date="1499050513173" expanded="true" signature="1354:1439" ph="SELECT gb_us... gb_manager" />
+            <marker date="1499050513173" expanded="true" signature="1510:3195" ph="INSERT INTO gb_manager... " />
           </folding>
         </state>
       </provider>

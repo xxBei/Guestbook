@@ -123,4 +123,13 @@ function _mysql_num_rows($_sql){
 function _mysql_free_result($_result){
     return mysqli_free_result($_result);
 }
+
+/**
+ * _mysql_insert_id() 获取上一条的id
+ * @return int|string
+ */
+function _mysql_insert_id(){
+    global $_conn;
+    return mysqli_insert_id($_conn);
+}
 ?>

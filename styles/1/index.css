@@ -9,6 +9,75 @@
 	width:340px;
 	height:250px;
 	border:1px solid #ccc;
+	font-size: 12px;
+}
+#user dl{
+	width:170px;
+	margin: 0 auto;
+	padding: 5px 0 0 0;
+}
+#user dl dt{
+	width:170px;
+	margin: 0 0 5px 0;
+}
+#user dl dt img{
+	width:100px;
+	display: block;
+	margin: 0 auto;
+}
+#user dl dd{
+	width: 85px;
+	height: 20px;
+	line-height: 20px;
+	float: left;
+	text-align: center;
+}
+#user dl dd.email,#user dl dd.url{
+	width: 170px;
+	text-align: left;
+	text-indent: 3px;
+	padding: 2px 0 0 0;
+}
+#user dl dd.user{
+	width: 170px;
+	float: none;
+	color: #f60;
+}
+#user dl dd.message{
+	background: url("../../images/message.png") no-repeat 2px 62%;
+}
+#user dl dd.message a{
+	text-decoration: none;
+	color: black;
+}
+#user dl dd.message a:hover{
+	color: #f00;
+	font-weight: bold;
+}
+#user dl dd.flower a{
+	text-decoration: none;
+	color: black;
+}
+#user dl dd.flower a:hover{
+	color: #f00;
+	font-weight: bold;
+}
+#user dl dd.friend{
+	background: url("../../images/friend_add.png") no-repeat -3% 62%;
+}
+#user dl dd.friend a{
+	text-decoration: none;
+	color: black;
+}
+#user dl dd.friend a:hover{
+	color: #f00;
+	font-weight: bold;
+}
+#user dl dd.guest{
+	background: url("../../images/guest.png") no-repeat 2px 62%;
+}
+#user dl dd.flower{
+	background: url("../../images/flower.png") no-repeat -3% 62%;
 }
 #pics{
 	width:340px;
@@ -16,3 +85,5 @@
 	margin:12px 0 0 0;
 	border:1px solid #ccc;
 }
+
+
