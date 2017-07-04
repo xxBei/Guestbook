@@ -33,11 +33,28 @@
 	text-align: center;
 }
 #user dl dd.email,#user dl dd.url{
-	width: 170px;
+	width: 218px;
 	text-align: left;
 	text-indent: 3px;
 	padding: 2px 0 0 0;
 }
+#user dl dd.email a{
+	text-decoration: none;
+	color: black;
+}
+#user dl dd.url a{
+	text-decoration: none;
+	color: black;
+}
+#user dl dd.email a:hover{
+	color: #f00;
+	text-decoration: underline;
+}
+#user dl dd.url a:hover{
+	color: #f00;
+	text-decoration: underline;
+}
+
 #user dl dd.user{
 	width: 170px;
 	float: none;

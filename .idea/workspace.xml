@@ -2,11 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dd901b7-c0ca-4b5e-a64f-e140a55fae93" name="默认" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/aricle.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bgMenubar.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bold.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/center.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/color.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/decrease.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/email.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/fontsize.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/help.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon10.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon11.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon12.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon13.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon14.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon15.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon16.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon4.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon5.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon6.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon7.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon8.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon9.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/image.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/increase.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/italic.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/left.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/movie.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/right.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/space.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/strikethrough.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/swf.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/underline.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/url.gif" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/global.func.php" afterPath="$PROJECT_DIR$/includes/global.func.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/mysql.func.php" afterPath="$PROJECT_DIR$/includes/mysql.func.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register.php" afterPath="$PROJECT_DIR$/register.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/1/index.css" afterPath="$PROJECT_DIR$/styles/1/index.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,37 +65,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+            <state relative-caret-position="412">
+              <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="global.func.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/global.func.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="351" column="43" lean-forward="false" selection-start-line="351" selection-start-column="43" selection-end-line="351" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/register.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
-              <folding>
-                <element signature="e#6#125#0#PHP" expanded="false" />
-                <marker date="1499050513173" expanded="true" signature="1354:1431" ph="SELECT gb_us... gb_manager" />
-                <marker date="1499050513173" expanded="true" signature="1354:1439" ph="SELECT gb_us... gb_manager" />
-                <marker date="1499050513173" expanded="true" signature="1510:3195" ph="INSERT INTO gb_manager... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -140,12 +149,12 @@
         <option value="$PROJECT_DIR$/flower.php" />
         <option value="$PROJECT_DIR$/member_flower.php" />
         <option value="$PROJECT_DIR$/includes/common.inc.php" />
-        <option value="$PROJECT_DIR$/styles/1/index.css" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/testxml.php" />
         <option value="$PROJECT_DIR$/includes/mysql.func.php" />
-        <option value="$PROJECT_DIR$/includes/global.func.php" />
         <option value="$PROJECT_DIR$/register.php" />
+        <option value="$PROJECT_DIR$/includes/global.func.php" />
+        <option value="$PROJECT_DIR$/styles/1/index.css" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -166,7 +175,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1378" />
     <option name="height" value="754" />
   </component>
   <component name="ProjectView">
@@ -184,7 +193,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -197,23 +205,10 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Guestbooks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Guestbooks" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -226,10 +221,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wamp\www\Guestbooks\images" />
       <recent name="D:\wamp\www\Guestbooks\styles\1" />
       <recent name="D:\wamp\www\Guestbooks" />
       <recent name="D:\wamp\www\Guestbooks\install" />
-      <recent name="D:\wamp\www\Guestbooks\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -367,7 +362,8 @@
       <workItem from="1498785561904" duration="5156000" />
       <workItem from="1498790866328" duration="16469000" />
       <workItem from="1498872638314" duration="8253000" />
-      <workItem from="1499045855355" duration="4762000" />
+      <workItem from="1499045855355" duration="13508000" />
+      <workItem from="1499131778766" duration="858000" />
     </task>
     <task id="LOCAL-00001" summary="phpStorm操作">
       <created>1496829025646</created>
@@ -621,11 +617,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498880321597</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="完成新进会员页面，新增在注册时生成XML文件">
+      <created>1499050693214</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1499050693214</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201728000" />
+    <option name="totallyTimeSpent" value="211332000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -637,19 +640,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1378" height="754" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16263238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16464339" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -721,7 +724,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="新增分页处理，每次只显示10条数据" />
     <MESSAGE value="将分页样式放到了basic.css中" />
     <MESSAGE value="分页容错处理：数据库中无数据的时候显示第一页，地址栏为空、字符串、小于零的时候都显示第一页；地址栏中page为小数的时候进行了取整数操作intval()" />
     <MESSAGE value="新增文章分页" />
@@ -746,7 +748,8 @@
     <MESSAGE value="修改查询中加锁操作(LIMIT 1)" />
     <MESSAGE value="修改之前的一些bug，并完成送花和查询花朵的操作" />
     <MESSAGE value="优化页面，新增一些注释" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化页面，新增一些注释" />
+    <MESSAGE value="完成新进会员页面，新增在注册时生成XML文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成新进会员页面，新增在注册时生成XML文件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -758,13 +761,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/styles/1/member_modify.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/member_modify.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-771">
@@ -975,7 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1005,7 +1000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1013,7 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="40" column="6" lean-forward="false" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,7 +1053,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1177,7 +1169,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="73" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1185,60 +1176,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/1/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testxml.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="26" column="17" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="26" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/testxml.php" />
     <entry file="file://$PROJECT_DIR$/includes/mysql.func.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="127" column="30" lean-forward="true" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/global.func.php">
+    <entry file="file://$PROJECT_DIR$/new.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="351" column="43" lean-forward="false" selection-start-line="351" selection-start-column="43" selection-end-line="351" selection-end-column="43" />
+        <state relative-caret-position="234">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+        <state relative-caret-position="234">
+          <caret line="87" column="46" lean-forward="true" selection-start-line="87" selection-start-column="46" selection-end-line="87" selection-end-column="46" />
           <folding>
             <element signature="e#6#125#0#PHP" expanded="false" />
             <marker date="1499050513173" expanded="true" signature="1354:1431" ph="SELECT gb_us... gb_manager" />
             <marker date="1499050513173" expanded="true" signature="1354:1439" ph="SELECT gb_us... gb_manager" />
             <marker date="1499050513173" expanded="true" signature="1510:3195" ph="INSERT INTO gb_manager... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/global.func.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="368" column="57" lean-forward="false" selection-start-line="368" selection-start-column="57" selection-end-line="368" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/1/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="60" column="16" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>

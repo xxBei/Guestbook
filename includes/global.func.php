@@ -358,4 +358,30 @@ function _set_xml($_xmlFile,$_clean){
     flock($_fp,LOCK_UN);
     fclose($_fp);
 }
+
+function _get_xml($_xmlfile){
+    if(file_exists($_xmlfile)){
+        $_xml = file_get_contents($_xmlfile);
+        preg_match_all('/<vip>(.*)<\/vip>/s',$_xml,$_dom);
+        $_html = array();
+        foreach ($_dom[1] as $value){
+            preg_match_all('/<id>(.*)<\/id>/s',$value,$_id);
+            preg_match_all('/<username>(.*)<\/username>/s',$value,$_username);
+            preg_match_all('/<sex>(.*)<\/sex>/s',$value,$_sex);
+            preg_match_all('/<face>(.*)<\/face>/s',$value,$_face);
+            preg_match_all('/<email>(.*)<\/email>/s',$value,$_email);
+            preg_match_all('/<url>(.*)<\/url>/s',$value,$_url);
+            $_html['id'] = $_id[1][0];
+            $_html['username'] = $_username[1][0];
+            $_html['sex'] = $_sex[1][0];
+            $_html['face'] = $_face[1][0];
+            $_html['email'] = $_email[1][0];
+            $_html['url'] = $_url[1][0];
+        }
+
+    }else{
+        _alert_back('文件不存在！');
+    }
+    return $_html;
+}
 ?>

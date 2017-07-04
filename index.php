@@ -3,6 +3,8 @@
     define('ROOT', true);
     define('SCRIPT', 'index');
     require dirname(__FILE__).'/includes/common.inc.php';
+    //读取XML
+    $_html = _get_xml('new.xml');
 ?>
 <!doctype html>
 <html lang="en">
@@ -20,14 +22,14 @@
 	<div id="user">
 		<h2>新进用户</h2>
         <dl>
-            <dd class="user">zBei</dd>
-            <dt><img src="face/1.png" alt="张三"></dt>
-            <dd class="message"><a href="javascript:;" name="message" title="69">发消息</a></dd>
-            <dd class="friend"><a href="javascript:;" name="friend" title="69">加为好友</a></dd>
+            <dd class="user"><?php echo $_html['username']?></dd>
+            <dt><img src="<?php echo $_html['face']?>" alt="<?php echo $_html['username']?>"></dt>
+            <dd class="message"><a href="javascript:;" name="message" title="<?php echo $_html['id']?>">发消息</a></dd>
+            <dd class="friend"><a href="javascript:;" name="friend" title="<?php echo $_html['id']?>">加为好友</a></dd>
             <dd class="guest">写留言</dd>
-            <dd class="flower"><a href="javascript:;" name="flower" title="69">送鲜花</a></dd>
-            <dd class="email">邮箱：zzw_bei@163.com</dd>
-            <dd class="url">网址：http://www.baidu.com</dd>
+            <dd class="flower"><a href="javascript:;" name="flower" title="<?php echo $_html['id']?>">送鲜花</a></dd>
+            <dd class="email">邮箱：<a href="mailto:<?php echo $_html['email']?>"><?php echo $_html['email']?></a></dd>
+            <dd class="url">网址：<a href="<?php echo $_html['url']?>" target="_blank"><?php echo $_html['url']?></a></dd>
         </dl>
 	</div>
 	<div id="pics">
