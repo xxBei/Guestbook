@@ -17,16 +17,19 @@
 }
 #list ul li{
 	padding: 8px 0;
+	border-bottom: 1px dashed #333;
 }
 #list ul li em{
 	float: right;
 	font-style: normal;
 }
+#list ul li em a{
+	border: 0;
+}
 #list ul li a{
 	color:#333;
 	text-decoration: none;
 	padding: 8px 0;
-	border-bottom: 1px dashed #333;
 }
 #list ul li a:hover {
 	color: #f30;
