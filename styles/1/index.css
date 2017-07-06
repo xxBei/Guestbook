@@ -5,7 +5,33 @@
 	border:1px solid #ccc;
 	float: right;
 }
-#user{
+#list a.post{
+	height: 33px;
+	width: 114px;
+	background: url("../../images/aricle.jpg") no-repeat;
+	display: block;
+	margin: 10px 10px 10px auto;
+}
+#list ul.article{
+	padding: 10px 50px;
+}
+#list ul li{
+	padding: 8px 0;
+}
+#list ul li em{
+	float: right;
+	font-style: normal;
+}
+#list ul li a{
+	color:#333;
+	text-decoration: none;
+	padding: 8px 0;
+	border-bottom: 1px dashed #333;
+}
+#list ul li a:hover {
+	color: #f30;
+}
+#user{	
 	width:340px;
 	height:250px;
 	border:1px solid #ccc;
