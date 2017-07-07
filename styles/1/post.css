@@ -24,14 +24,43 @@
     border:1px dashed #333;
     margin:10px 0;
 }
+#post dl dd div#ubb{
+    width: 422px;
+    height: 26px;
+    background: url("../../images/bgMenubar.gif");
+    border: 1px dashed #666;
+    border-bottom: 1px solid #666;
+}
+#post dl dd div#ubb img{
+    display: block;
+    float: left;
+    padding: 5px 0 0 6px;
+}
 #post dl dd textarea{
     width: 422px;
-    height: 200px;
     border: 1px dashed #333;
     overflow-Y: scroll;
-    margin: 10px 0;
+    border-top: none;
 }
 #post dl dd input.radio{
     margin: 0 5px;
     display: inline-block;
 }
+#post dl dd input.yzm{
+    width: 60px;
+    height: 19px;
+}
+
+#post dl dd img#code{
+    position: relative;
+    top: 6px;
+    left:10px;
+    cursor: pointer;
+}
+#post dl dd input.submit{
+     width:80px;
+     height:22px;
+     border:1px dashed #333;
+     background:#fff;
+     margin:10px 0 0 17px;
+ }
